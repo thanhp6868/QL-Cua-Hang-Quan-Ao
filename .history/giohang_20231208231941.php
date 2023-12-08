@@ -50,7 +50,7 @@ margin-top: 20px; line-height: 50px;">
                 foreach($_SESSION['giohang'] as $key => $value) {
                     $mangid[] = $key;
                 }
-                $mangid2 = implode( ',',$mangid);
+                $mangid2 = implode($mangid, ',');
                 $sql = "select * from sanpham where id in ($mangid2)";
                 $stmt = $conn->prepare($sql);
                 $query = $stmt->execute();
@@ -64,11 +64,11 @@ margin-top: 20px; line-height: 50px;">
                     echo "<tr>";
                     echo "<td>$row[tensp]</td>";
                     echo "<td><img src='admin/quanlysanpham/$anh' width='100px' height='60px' style='border-radius:6px'></td>";
-                    echo "<td>".number_format($row['gia'], 3)." VND</td>";
+                    echo "<td>".number_format($row[gia], 3)." VND</td>";
 
-                    echo "<td><input type='text' name='now[$row[id]]' value=".$_SESSION['giohang'][$row['id']]." style='width: 70px; text-align: center;'/></td>";
+                    echo "<td><input type='text' name='now[$row[id]]' value=".$_SESSION[giohang][$row[id]]." style='width: 70px; text-align: center;'/></td>";
 
-                    echo "<td>".number_format($_SESSION['giohang'][$row['id']] * $row['gia'], 3)." VND</td>";
+                    echo "<td>".number_format($_SESSION[giohang][$row[id]] * $row[gia], 3)." VND</td>";
                     echo "<td><a href='xoagh.php?id=$row[id]'><img  id='img' src='dangnhapthanhcong/products/delete-24.ico'/></a></td>";
                     echo "</tr>";
                 }

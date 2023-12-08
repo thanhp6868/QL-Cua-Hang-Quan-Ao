@@ -8,7 +8,7 @@
 	<meta name="author" content="GallerySoft.info" />
 
 	<title>Untitled 2</title>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"/> -->
 </head>
 
 <body>

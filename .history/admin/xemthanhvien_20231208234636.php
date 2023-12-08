@@ -94,7 +94,7 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </form>
         </fieldset>
     </div>
-    
+    <div id="footer">Bản Quyền Ngọc Chiên IT</div>
 </body>
 
 </html>

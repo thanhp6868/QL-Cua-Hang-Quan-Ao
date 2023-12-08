@@ -1,7 +1,5 @@
 <?php
 	session_start();
-
-
  ?>  
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -69,7 +67,6 @@ top: 21px;"/></a></li>
                        <?php
                     include("ketnoi.php");
                     $sql="select * from chuyenmuc ";
-                    $stmt = $conn->prepare($sql);
                     $query = $stmt->execute();
                     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo "<li><a href='thoitrang.php?id=$row[chuyenmuc_id]'>$row[chuyenmuc]</a></li>";

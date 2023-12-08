@@ -50,14 +50,14 @@
 
 } 
 #table tr{
-     border: 1px solid black;
+     border: 1px solid aqua;
 }
 #table th{
     background-color:#FF8000;
     color: white;
 }
 #table td{
-     border: 1px solid black;
+     border: 1px solid aqua;
      text-align: center;
      color: #444;
 }
@@ -108,7 +108,7 @@
     margin: auto;
 }  	
 #quangcao th{
-    background-color: #83BCEC    ;
+    background-color: #blue;
     color: white;
 } 
 #quangcao td{

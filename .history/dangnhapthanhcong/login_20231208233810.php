@@ -17,19 +17,14 @@ if(isset($_POST['ok'])) {
         $b = $_POST['pass'];
     }
 
-    if ($a && $b) {
+    if($a && $b) {
         include('ketnoi.php');
-        $sql = "select * from user where mail=:mail and matkhau=:matkhau";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':mail', $a);
-        $stmt->bindParam(':matkhau', $b);
-        $stmt->execute();
-        
-        if ($stmt->rowCount() == 1) {
-            $data = $stmt->fetch(PDO::FETCH_ASSOC);
+        $sql = "select * from user where mail='$a' and matkhau='$b'";
+        $result = $conn->query($sql);
+        if($result->num_rows == 1) {
+            $data = $result->fetch_assoc();
             $_SESSION['level'] = $data['level'];
-            
-            if ($_SESSION['level'] == 2) {
+            if($_SESSION['level'] == 2) {
                 header("location:..\admin\admin.php");
             } else {
                 $_SESSION['user'] = $a;

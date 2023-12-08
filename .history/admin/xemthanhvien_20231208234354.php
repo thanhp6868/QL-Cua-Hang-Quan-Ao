@@ -7,7 +7,7 @@ $sql = "select * from user where ID='$id' ";
 $stmt = $conn->prepare($sql);
 $query = $stmt->execute();
 $row = array();
-while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
+while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
     $row['ho'] = $data['ho'];
     $row['ten'] = $data['ten'];
@@ -76,10 +76,10 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     <tr>
                         <td>Giới Tính</td>
                         <td>
-                            <font color='black'> Nam </font> <input <?php if($row['gioitinh'] == 1) {
+                            <font color='red'> Nam </font> <input <?php if($row['gioitinh'] == 1) {
                                 echo "checked='checked'";
                             } ?> type="radio" name="gt" value="1" />
-                            <font color='black'> Nữ </font> <input <?php if($row['gioitinh'] == 0) {
+                            <font color='red'> Nữ </font> <input <?php if($row['gioitinh'] == 0) {
                                 echo "checked='checked'";
                             } ?>type="radio" name="gt" value="0" />
 
@@ -94,7 +94,7 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </form>
         </fieldset>
     </div>
-    
+    <div id="footer">Bản Quyền Ngọc Chiên IT</div>
 </body>
 
 </html>
