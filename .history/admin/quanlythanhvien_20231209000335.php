@@ -9,88 +9,7 @@ session_start();
     <!-- <meta name="author" content="GallerySoft.info" /> -->
 
     <title>Quản lý thành viên</title>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
-    <style>
-        #top {
-            width: 850px;
-            margin: auto;
-            height: 120px;
-            background-color: teal;
-            text-align: center;
-            line-height: 120px;
-            color: white;
-            font-size: 26px;
-            font-family: arial;
-            font-weight: bold;
-        }
-
-        #menu {
-            width: 850px;
-            margin: auto;
-            height: 40px;
-            background-color: teal;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        #menu ul {
-            list-style: none;
-        }
-
-        #menu ul li {
-            float: left;
-            width: 140px;
-            text-align: center;
-            border-left: 1px solid white;
-            line-height: 40px;
-        }
-
-        #menu ul li:hover {
-            background-color: #004080;
-        }
-
-        #menu ul li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-
-        #table {
-            width: 850px;
-            margin: auto;
-            margin-top: 10px;
-        }
-
-        #table table {
-            width: 850px;
-
-        }
-
-        #table tr {
-            border: 1px solid black;
-        }
-
-        #table th {
-            background-color: #FF8000;
-            color: white;
-        }
-
-        #table td {
-            border: 1px solid black;
-            text-align: center;
-            color: #444;
-        }
-
-        #table a {
-            color: blue;
-            text-decoration: none;
-        }
-
-        #table a:hover {
-            color: blueviolet;
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
@@ -151,9 +70,9 @@ session_start();
                         }
                         ; ?>
                     </td>
-                    <td>
-                        <a style="margin-right:15px " href="xemthanhvien.php?id=<?php echo $row['ID'] ?>">Xem</a>
-
+                    <td >
+                        <a style="margin-right:15px" href="xemthanhvien.php?id=<?php echo $row['ID'] ?>">Xem</a>
+                        
                         <a href="xoathanhvien.php?id=<?php echo $row['ID']; ?>">Delete</a>
                     </td>
                 </tr>

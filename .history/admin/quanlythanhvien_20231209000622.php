@@ -87,7 +87,7 @@ session_start();
         }
 
         #table a:hover {
-            color: blueviolet;
+            color: lime;
             text-decoration: underline;
         }
     </style>

@@ -23,10 +23,10 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
 <head>
     <meta http-equiv="content-type" content="text/html" charset="utf-8" />
-    <!-- <meta name="author" content="GallerySoft.info" /> -->
+    <meta name="author" content="GallerySoft.info" />
 
     <title>Untitled 2</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>

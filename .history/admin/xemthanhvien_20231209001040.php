@@ -26,7 +26,7 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <!-- <meta name="author" content="GallerySoft.info" /> -->
 
     <title>Untitled 2</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>

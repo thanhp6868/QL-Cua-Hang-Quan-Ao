@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0px;
     padding: 0px;
 }
@@ -40,7 +40,7 @@
     color: white;
     font-weight: bold;
 }
-#table{
+/* #table{
     width:850px;
     margin: auto;
     margin-top: 10px;
@@ -68,7 +68,7 @@
 #table a:hover{
     color: lime;
     text-decoration: underline;
-}
+} */
 #footer{
     width: 850px;
     margin: auto;
@@ -222,4 +222,4 @@
 }
 #xemtv table input,#xemtv table textarea{
     color: red;
-} */
+}

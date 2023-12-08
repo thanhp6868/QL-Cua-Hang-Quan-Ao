@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0px;
     padding: 0px;
 }
@@ -6,7 +6,7 @@
     width:850px;
     margin: auto;
     height: 120px;
-    background-color:  teal;
+    background-color:  blue;
     text-align: center;
     line-height:120px;
     color: white;
@@ -222,4 +222,4 @@
 }
 #xemtv table input,#xemtv table textarea{
     color: red;
-} */
+}

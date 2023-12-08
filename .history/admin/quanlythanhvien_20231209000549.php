@@ -82,12 +82,12 @@ session_start();
         }
 
         #table a {
-            color: blue;
+            color: red;
             text-decoration: none;
         }
 
         #table a:hover {
-            color: blueviolet;
+            color: lime;
             text-decoration: underline;
         }
     </style>
@@ -152,7 +152,7 @@ session_start();
                         ; ?>
                     </td>
                     <td>
-                        <a style="margin-right:15px " href="xemthanhvien.php?id=<?php echo $row['ID'] ?>">Xem</a>
+                        <a style="margin-right:15px" href="xemthanhvien.php?id=<?php echo $row['ID'] ?>">Xem</a>
 
                         <a href="xoathanhvien.php?id=<?php echo $row['ID']; ?>">Delete</a>
                     </td>
