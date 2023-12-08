@@ -23,9 +23,10 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
 <head>
     <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <!-- <meta name="author" content="GallerySoft.info" /> -->
+
     <title>Untitled 2</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
 <body>
@@ -70,7 +71,7 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     </tr>
                     <tr>
                         <td>Ngày sinh</td>
-                        <td><input type="date" value="<?php echo $row['ngaysinh']; ?>" /></td>
+                        <td><input type="text" value="<?php echo $row['ngaysinh']; ?>" /></td>
                     </tr>
                     <tr>
                         <td>Giới Tính</td>
@@ -93,7 +94,7 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </form>
         </fieldset>
     </div>
-
+    
 </body>
 
 </html>

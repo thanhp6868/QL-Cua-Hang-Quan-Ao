@@ -2,9 +2,7 @@
     include("ketnoi.php");
     $id=$_GET['id'];
     $sql="delete from user where id='$id'";
-    $stmt = $conn->prepare($sql);
-    $query = $stmt->execute();
-    if ($query) {
+    if(mysql_query($sql)){
         echo 'Xóa Xong';
         header("location:quanlythanhvien.php");
     }

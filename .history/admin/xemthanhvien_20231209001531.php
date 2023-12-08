@@ -24,8 +24,91 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
 <head>
     <meta http-equiv="content-type" content="text/html" charset="utf-8" />
     <title>Untitled 2</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #top {
+            width: 850px;
+            margin: auto;
+            height: 120px;
+            background-color: teal;
+            text-align: center;
+            line-height: 120px;
+            color: white;
+            font-size: 26px;
+            font-family: arial;
+            font-weight: bold;
+        }
+
+        #menu {
+            width: 850px;
+            margin: auto;
+            height: 40px;
+            background-color: teal;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        #menu ul {
+            list-style: none;
+        }
+
+        #menu ul li {
+            float: left;
+            width: 140px;
+            text-align: center;
+            border-left: 1px solid white;
+            line-height: 40px;
+        }
+
+        #menu ul li:hover {
+            background-color: #004080;
+        }
+
+        #menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        #table {
+            width: 850px;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        #table table {
+            width: 850px;
+
+        }
+
+        #table tr {
+            border: 1px solid black;
+        }
+
+        #table th {
+            background-color: #FF8000;
+            color: white;
+        }
+
+        #table td {
+            border: 1px solid black;
+            text-align: center;
+            color: #444;
+        }
+
+        #table a {
+            color: red;
+            text-decoration: none;
+        }
+
+        #table a:hover {
+            color: lime;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
 <body>

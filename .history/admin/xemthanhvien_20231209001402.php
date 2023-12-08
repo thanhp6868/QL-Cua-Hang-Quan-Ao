@@ -25,7 +25,6 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
     <meta http-equiv="content-type" content="text/html" charset="utf-8" />
     <title>Untitled 2</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
 
 <body>
@@ -93,7 +92,7 @@ while($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
             </form>
         </fieldset>
     </div>
-
+    
 </body>
 
 </html>
