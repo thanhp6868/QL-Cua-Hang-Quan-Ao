@@ -3,8 +3,7 @@
       <div class="app">
         <a href="#">
           <img src="img/google_play.png" alt="" srcset="">
-        </a>
-        <br>
+        </a><br>
         <a href="#">
           <img src="img/apple_store.png" alt="" srcset="">
         </a>
