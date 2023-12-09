@@ -50,11 +50,10 @@
         <?php
             include('../ketnoi.php');
             $sql="select *from hoadon order by id_hoadon desc";
+            $query=mysql_query($sql);
             $stt=0;
-            $stmt = $conn->prepare($sql);
-            $query = $stmt->execute();
-            $row = array();
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            while($row=mysql_fetch_assoc($query)){
+                $stt++;
         ?>
         <tr>
             <td><?php echo $stt; ?></td>

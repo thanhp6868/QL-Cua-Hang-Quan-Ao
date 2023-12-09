@@ -17,9 +17,7 @@ if (isset($_POST['ok'])) {
         $tmp = $_FILES['fileanh']['tmp_name'];
         $dir = 'products/' . $_FILES['fileanh']['name'];
         $sql = "update quangcao set tenanh='$dir' where id='$id'";
-        $stmt = $conn->prepare($sql);
-        $query = $stmt->execute();
-        if ($query) {
+        if ($query = mysql_query($sql)) {
             header('location: quanlyquangcao.php');
         } else {
             echo 'Xay ra loi';

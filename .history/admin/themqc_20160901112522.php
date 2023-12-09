@@ -13,9 +13,7 @@
         $dir="products/".$name;
         include('ketnoi.php');
         $sql="insert into quangcao (tenanh) values ('$dir')";
-        $stmt = $conn->prepare($sql);
-        $query = $stmt->execute();
-        if ($query) {
+        if($query=mysql_query($sql)){
             header('location: quanlyquangcao.php');
         }
         else {

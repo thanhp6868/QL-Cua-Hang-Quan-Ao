@@ -1,29 +1,31 @@
 
 <?php
 	session_start();
-    $loi=array();
-    $loi['anh']=null;
-    if(isset($_POST['ok'])){
-       if($_FILES['fileanh']['error']>0){
-            $loi['anh']="* Xin vui lòng chọn quảng cáo cần thêm";
+       $id=$_GET['id'];
+       include('ketnoi.php');
+       $sql="select * from quangcao where id='$id'";
+       $query=mysql_query($sql);
+       $data=array();
+       while($row=mysql_fetch_assoc($query)){
+            $data['tenanh']=$row['tenanh'];
        }
-       else{
-        $name=$_FILES['fileanh']['name'];
-        $tmp=$_FILES['fileanh']['tmp_name'];
-        $dir="products/".$name;
-        include('ketnoi.php');
-        $sql="insert into quangcao (tenanh) values ('$dir')";
-        $stmt = $conn->prepare($sql);
-        $query = $stmt->execute();
-        if ($query) {
-            header('location: quanlyquangcao.php');
-        }
-        else {
-            echo 'Xay ra loi';
-        }
-         move_uploaded_file($tmp,$dir);
-        }
-    }
+       if(isset($_POST['ok'])){
+            if($_FILES['fileanh']['error']>0){
+                header('location: quanlyquangcao.php');
+            }
+            else{
+                $tmp=$_FILES['fileanh']['tmp_name'];
+                $dir='products/'.$_FILES['fileanh']['name'];
+                $sql="update quangcao set tenanh='$dir' where id='$id'";
+                if($query=mysql_query($sql)){
+                    header('location: quanlyquangcao.php');
+                }
+                else{
+                    echo 'Xay ra loi';
+                }
+            }
+            move_uploaded_file($tmp,$dir);
+       }
  ?>
 <!DOCTYPE HTML>
 <html>
@@ -50,23 +52,26 @@
             <li><a href="quanlythanhvien.php">Quản lý thành viên</a></li>
             <li><a href="quanlychuyenmuc/quanlychuyenmuc.php">Quản lý chuyên mục</a></li>
             <li><a href="quanlysanpham/quanlysanpham.php">Quản lý sản phẩm</a></li>
-            <li ><a href="quanlylienhe/quanlylienhe.php">Quản lý liên hệ</a></li>
+             <li ><a href="quanlylienhe/quanlylienhe.php">Quản lý liên hệ</a></li>
             <li><a href="quanlyquangcao.php">Quản lý quảng cáo</a></li>
             <li><a href="quanlydonhang/quanlydonhang.php">Quản lý hoá đơn</a></li>
         </ul>
     </div>
-        <div id="themqc">
+        <div id="suaqc">
             <fieldset>
-                <legend>Thêm quảng cáo</legend>
+                <legend>Sửa quảng cáo</legend>
                 <form method="post" enctype="multipart/form-data">
                     <table>
                     <tr>
+                        <td>Ảnh cũ</td>
+                        <td><img src="<?php echo '../dangnhapthanhcong/'.$data['tenanh'];?>" width="150px" height="100px"></td>
+                    </tr>
+                    <tr>
                         <td style="width: 100px;">Ảnh quảng cáo</td>
                         <td ><input type="file" name="fileanh" style="width: 150px;"></td>
-                        <td><font color='red'><?php echo $loi['anh'];?></font></td>
                      </tr>
                     <tr><td></td>
-                        <td ><input type="submit" name="ok" value="Thêm"/></td></tr>
+                        <td ><input type="submit" name="ok" value="Sửa"/></td></tr>
                     </table>
                 </form>
             </fieldset>

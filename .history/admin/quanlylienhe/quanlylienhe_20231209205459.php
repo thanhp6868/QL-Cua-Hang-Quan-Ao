@@ -77,6 +77,7 @@ session_start();
             <?php } ?>
         </table>
     </div>
+    <div id="footer">Bản Quyền Ngọc Chiên IT</div>
 </body>
 
 </html>

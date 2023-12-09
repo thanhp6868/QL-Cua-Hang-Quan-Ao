@@ -47,10 +47,9 @@
                 <?php
                     include('ketnoi.php');
                     $sql="select * from quangcao";
-                    $stmt = $conn->prepare($sql);
-                    $query = $stmt->execute();
-                    $stt = 0;
-                    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    $query=mysql_query($sql);
+                        $stt=0;
+                    while($row=mysql_fetch_assoc($query)){
                         $stt++;
                 ?>
                 <tr>
@@ -62,6 +61,6 @@
                 <?php } ?>
             </table>
     </div>
-    
+    <div id="footer">Bản Quyền Ngọc Chiên IT</div>
 </body>
 </html>

@@ -40,9 +40,8 @@
         <?php
             $id=$_GET['id'];
             include('../ketnoi.php');
-            $stmt = $conn->prepare("select * from hoadon where id_hoadon='$id'");
-            $data=$stmt->fetch(PDO::FETCH_ASSOC);
-            
+            $query=mysql_query("select * from hoadon where id_hoadon='$id'");
+            $data=mysql_fetch_assoc($query);
             
         ?>
         <div id="dh1" >
@@ -61,9 +60,10 @@
                     <th>Thành tiền</th>
                 </tr>
                 <?php
-                    $stmt = $conn->prepare("select * from chitiet_hoadon where id_hoadon='$id' ");
+                    
+                    $query=mysql_query("select * from chitiet_hoadon where id_hoadon='$id' ");
                     $stt=0;
-                    while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+                    while($row=mysql_fetch_assoc($query)){
                         $stt++;
                         $idsanpham=$row['id_sp'];
                         $query2=mysql_query("select * from sanpham where id='$idsanpham'");

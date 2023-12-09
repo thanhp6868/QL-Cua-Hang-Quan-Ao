@@ -8,9 +8,8 @@
                 $id=$_GET['id'];
                 include('ketnoi.php');
                 $sql="select * from chuyenmuc where chuyenmuc_id='$id'";
-                $stmt = $conn->prepare($sql);
-                        $query = $stmt->execute();
-                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $query=mysql_query($sql);
+                while($row=mysql_fetch_assoc($query)){
                     
             ?>
          	<div id="quangcao"><?php echo $row['chuyenmuc']?></div>
@@ -22,9 +21,8 @@
                     <?php
                        include('ketnoi.php'); 
                        $sql="select * from sanpham  where chuyenmuc_id='$id' order by id desc ";
-                       $stmt = $conn->prepare($sql);
-                        $query = $stmt->execute();
-                    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                       $query=mysql_query($sql);
+                       while($row=mysql_fetch_assoc($query)){
                             
                     ?>
                 	<li><a href="thongtinsp.php?id=<?php echo $row['id']?>"><img  style="border-radius: 5px;"src="<?php echo 'admin/quanlysanpham/'.$row['hinhanh'];?>" width="130" height="150"/><p align="center"><?php echo $row['tensp']?> </p><p align="center" style="color: red;"><?php echo $row

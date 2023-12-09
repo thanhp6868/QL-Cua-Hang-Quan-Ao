@@ -63,7 +63,7 @@
                 <?php
                     $stmt = $conn->prepare("select * from chitiet_hoadon where id_hoadon='$id' ");
                     $stt=0;
-                    while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+                    while($row=$stmt->fetch(PDO::FETCH_ASSOC);){
                         $stt++;
                         $idsanpham=$row['id_sp'];
                         $query2=mysql_query("select * from sanpham where id='$idsanpham'");

@@ -9,7 +9,7 @@ session_start();
     <meta name="author" content="GallerySoft.info" />
 
     <title>Untitled 2</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="../style.css" />
 </head>
 
 <body>
@@ -18,7 +18,7 @@ session_start();
 
         echo "<div id='top'>Welcome Admin <a href='../../dangnhapthanhcong/logout.php' style='color:white;font-size:15px;'>(Logout)</a></div>";
     } else {
-        header('location:../../dangnhapthanhcong/login.php');
+        header('location:../dangnhapthanhcong/login.php');
     }
     ?>
     <div id="menu">
@@ -30,29 +30,31 @@ session_start();
             <li><a href="../quanlysanpham/quanlysanpham.php">Quản lý sản phẩm</a></li>
 
             <li><a href="../quanlylienhe/quanlylienhe.php">Quản lý liên hệ</a></li>
+
             <li><a href="../quanlyquangcao.php">Quản lý quảng cáo</a></li>
-            <li><a href="../quanlydonhang/quanlydonhang.php">Quản lý hoá đơn</a></li>
+
+            <li><a href="quanlydonhang.php">Quản lý hoá đơn</a></li>
         </ul>
     </div>
-    <div id="lienhe">
-        <table>
+    <div id="donhang">
+        <table style="border: 1px solid black;">
             <tr>
                 <th>STT</th>
-                <th>Thời Gian</th>
-                <th>Họ Và Tên</th>
-                <th>Email</th>
-                <th>Tiêu Đề</th>
+                <th>Ngày mua</th>
+                <th>Họ và Tên</th>
+                <th>Phone</th>
+                <th>Tộng Tiền</th>
                 <th>Xem</th>
                 <th>Xóa</th>
             </tr>
             <?php
             include('../ketnoi.php');
-            $sql = "select * from lienhe order by id_lh desc";
+            $sql = "select *from hoadon order by id_hoadon desc";
+
             $stmt = $conn->prepare($sql);
             $query = $stmt->execute();
-            $stt = 0;
+            $row = array();
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-
                 $stt++;
                 ?>
                 <tr>
@@ -60,23 +62,25 @@ session_start();
                         <?php echo $stt; ?>
                     </td>
                     <td>
-                        <?php echo $row['time'] ?>
+                        <?php echo $row['ngaymua']; ?>
                     </td>
                     <td>
-                        <?php echo $row['hoten'] ?>
+                        <?php echo $row['hoten_nm']; ?>
                     </td>
                     <td>
-                        <?php echo $row['email'] ?>
+                        <?php echo $row['phone'] ?>
                     </td>
                     <td>
-                        <?php echo $row['tieude'] ?>
+                        <?php echo $row['tongtien'] ?>
                     </td>
-                    <td><a href="view.php?id=<?php echo $row['id_lh'] ?>">Xem</a></td>
-                    <td><a href="xoa.php?id=<?php echo $row['id_lh'] ?>">Delete</a></td>
+                    <td><a href="xemdonhang.php?id=<?php echo $row['id_hoadon'] ?>">Xem</a></td>
+                    <td><a href="xoadonhang.php?id=<?php echo $row['id_hoadon'] ?>">Delete</a></td>
                 </tr>
             <?php } ?>
         </table>
+
     </div>
+    <div id="footer">Bản Quyền Ngọc Chiên IT</div>
 </body>
 
 </html>
