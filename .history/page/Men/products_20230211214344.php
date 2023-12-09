@@ -1,6 +1,5 @@
 <?php
 session_start();
-include('../../db/connect.php');
 include '../../backend/common_function.php';
 ?>
 <!DOCTYPE html>
@@ -28,7 +27,7 @@ include '../../backend/common_function.php';
 
 <body>
   <header>
-    <div class="logo"></a></div>
+    <div class="logo"><a href="index.php"><img src="img/icon.png" alt="" srcset=""></a></div>
     <div>
       <div class="uper">
         <form action="" method="get">
@@ -76,7 +75,7 @@ include '../../backend/common_function.php';
               <a href="topware.php?ctg=Beauty/Skincare,Bath and Body">Skincare,Bath and Body</a>
               <a href="topware.php?ctg=Beauty/Haircare">Haircare</a>
               <a href="topware.php?ctg=Beauty/Fragrances">Fragrances</a>
-              <a href="topware.php?ctg=Beauty/Men Grooming">Mens Grooming</a>
+              <a href="topware.php?ctg=Beauty/Men Grooming">Men Grooming</a>
               <a href="topware.php?ctg=Beauty/Beauty Gift">Beauty Gift</a>
 
             </div>
@@ -99,7 +98,7 @@ include '../../backend/common_function.php';
     <div class="dropdown2">
       <?php
       if (isset($_SESSION['username'])) {
-        echo '<a href="../../user_area/profile.php" style="top:-20px; color: white; !important">
+        echo '<a href="../../backend/user_logout.php" style="top:-20px; color: white; !important">
         <img src="img/profile.png" alt="" srcset=""  style="width:20px; !important">
         <p>Profile</p>
       </a>';
@@ -181,65 +180,27 @@ include '../../backend/common_function.php';
       </div>
     </div>
   </header>
-
   <div>
     <?php
-    $ctg = "";
     if (isset($_GET['ctg'])) {
-      $ctg = $_GET['ctg'];
-      $split = explode("/", $ctg);
-      $ctag = $split[0];
-      $subctag = $split[1];
+      $all_ctg = $_GET['ctg'];
+      $split = explode("/", $all_ctg);
+      $ctg = $split[1];
     }
     ?>
-    <!-- <h3 class="link_w"> <a href="../../index.php">Home /</a> <a href=""><?php echo $ctag; ?> /</a> <?php echo $subctag; ?></h3> -->
+    <h3 class="link_w"> <a href="../../index.php">Home /</a> <a href="../men.php">Men /</a> <?php echo $ctg; ?></h3>
     <div class="p_show">
 
       <!-- call product function to display all products -->
       <?php
-      if (isset($_GET['ctg'])) {
-        $full_ctg = $_GET['ctg'];
-        $split_ctg = explode("/", $full_ctg);
-        $ctg = $split_ctg[0];
-        $sub_ctg = $split_ctg[1];
-
-        $conn = mysqli_connect('localhost', 'root', '', 'eco_admin');
-        $sql = "select * from product where p_ctag='$ctg' and p_sub_ctag='$sub_ctg'";
-        $res = mysqli_query($conn, $sql);
-        if ($res) {
-          $num_row = mysqli_num_rows($res);
-          if ($num_row > 0) {
-            while ($row = mysqli_fetch_array($res)) {
-              $product_id = $row['p_id'];
-              $product_image = $row['p_img1'];
-              $product_name = $row['p_name'];
-              $product_price = $row['p_price'];
-
-              echo '<div class="ctag_u">
-              
-           <a href="product.php?id=' . $product_id . '">
-             <div class="c_img_bg_u ">
-               <img class="ctag_img_u" src="img/' . $product_image . '" alt="">
-               <h3>' . $product_name . '</h3>
-               <h4>৳.' . $product_price . '</h4>
-           </a>
-        
-           <a href="../../add_to_cart.php?add_to_cart=' . $product_id . "/" . $product_price . '"><button class="add_to_cart"> Add to Cart </button></a>
-         </div>';
-            }
-          } else {
-            echo '<div class="alert alert-warning" role="alert">
-            <h3>Related product currently not available</h3>
-          </div>';
-          }
-        } else {
-          die(mysqli_error($conn));
-        }
-      }
+      // getAllProducts();
+      getProductsByCategory();
       ?>
 
     </div>
   </div>
+
+
 
   <script>
     function loginpage() {
@@ -253,24 +214,33 @@ include '../../backend/common_function.php';
   </script>
 
 
-<footer>
+
+
+  <footer>
     <div class="footermain">
       <div class="app">
+        <h3>EXPERIENCE HRX APP ON MOBILE</h3>
         <a href="#">
-          <img src="img/google_play.png" alt="" srcset="">
-        </a>
-        <br>
+          <img src="../../img/google_play.png" alt="" srcset="">
+        </a><br>
         <a href="#">
-          <img src="img/apple_store.png" alt="" srcset="">
+          <img src="../../img/apple_store.png" alt="" srcset="">
         </a>
       </div>
-      
+      <div class="aboutus">
+        <h3>ABOUT US</h3>
+        <p>
+          HRX is a major Bangladeshi fashion e-commerce company headquartered in Dhaka, Bangladesh. The company was founded in 2012 to sell personalized gift items. In May 2014, HRX began selling fashion and lifestyle products and moved away from personalisation. By 2018 HRX offered products from 350 Bangladeshi and International brands.
+        </p>
+      </div>
       <div class="social">
+        <h3>KEEP IN TOUCH
+        </h3>
         <ul>
-          <li><a href="#"><img src="img/fb.png" alt="" srcset=""></a></li>
-          <li><a href="#"><img src="img/insta.png" alt="" srcset=""></a></li>
-          <li><a href="#"><img src="img/twitter.png" alt="" srcset=""></a></li>
-          <li><a href="#"><img src="img/link.png" alt="" srcset=""></a></li>
+          <li><a href="#"><img src="../../img/fb.png" alt="" srcset=""></a></li>
+          <li><a href="#"><img src="../../img/insta.png" alt="" srcset=""></a></li>
+          <li><a href="#"><img src="../../img/twitter.png" alt="" srcset=""></a></li>
+          <li><a href="#"><img src="../../img/link.png" alt="" srcset=""></a></li>
         </ul>
       </div>
 

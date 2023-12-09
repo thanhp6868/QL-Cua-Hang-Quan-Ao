@@ -11,24 +11,31 @@ include '../../backend/common_function.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="../../style.css">
 
   <link rel="shortcut icon" href="../../img/fab.png" type="image/x-icon">
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript"
+    src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
 
-  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+  <script type="text/javascript"
+    src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
   <script src="../../js/js_own.js"></script>
 
-  <title>HRX | Men | Topwear</title>
+  <title>HRX | All Product</title>
 </head>
 
 <body>
   <header>
-    <div class="logo"></a></div>
+    <div class="logo"><a href="index.php"><img src="img/icon.png" alt="" srcset=""></a></div>
     <div>
       <div class="uper">
         <form action="" method="get">
@@ -94,12 +101,13 @@ include '../../backend/common_function.php';
         </form>
       </div>
     </div>
-    <form action="search_products.php" method="post"><input class="search" type="search" name="search_key" id="" placeholder="search for products, bands and more"></form>
+    <form action="search_products.php" method="post"><input class="search" type="search" name="search_key" id=""
+        placeholder="search for products, bands and more"></form>
 
     <div class="dropdown2">
       <?php
       if (isset($_SESSION['username'])) {
-        echo '<a href="../../user_area/profile.php" style="top:-20px; color: white; !important">
+        echo '<a href="../../backend/user_logout.php" style="top:-20px; color: white; !important">
         <img src="img/profile.png" alt="" srcset=""  style="width:20px; !important">
         <p>Profile</p>
       </a>';
@@ -171,11 +179,12 @@ include '../../backend/common_function.php';
 
     </div>
     <div class="uper  side2">
-
       <div class="dropdown headerimg">
         <a href="../cart.php">
-          <img src="img/cart.png" alt="" srcset=""><sup><?php $cart = ItemInCart();
-                                                        echo $cart; ?></sup>
+          <img src="img/cart.png" alt="" srcset=""><sup>
+            <?php $cart = ItemInCart();
+            echo $cart; ?>
+          </sup>
           <p>Cart</p>
         </a>
       </div>
@@ -187,24 +196,26 @@ include '../../backend/common_function.php';
     $ctg = "";
     if (isset($_GET['ctg'])) {
       $ctg = $_GET['ctg'];
-      $split = explode("/", $ctg);
-      $ctag = $split[0];
-      $subctag = $split[1];
     }
     ?>
-    <!-- <h3 class="link_w"> <a href="../../index.php">Home /</a> <a href=""><?php echo $ctag; ?> /</a> <?php echo $subctag; ?></h3> -->
+    <h3 class="link_w"> <a href="../../index.php">Home /</a> <a href="">
+        <?php echo $ctg; ?> /
+      </a></h3>
     <div class="p_show">
 
       <!-- call product function to display all products -->
       <?php
       if (isset($_GET['ctg'])) {
-        $full_ctg = $_GET['ctg'];
-        $split_ctg = explode("/", $full_ctg);
-        $ctg = $split_ctg[0];
-        $sub_ctg = $split_ctg[1];
+        $ctg = $_GET['ctg'];
 
         $conn = mysqli_connect('localhost', 'root', '', 'eco_admin');
-        $sql = "select * from product where p_ctag='$ctg' and p_sub_ctag='$sub_ctg'";
+        if ($ctg == "Woman") {
+          $sql = "select * from product where p_ctag='$ctg' order by rand()";
+        } else if ($ctg == "All") {
+          $sql = "select * from product order by rand()";
+        } else {
+          $sql = "select * from product where p_name like '%$ctg%' or p_keyword like '%$ctg%' or p_ctag like '%$ctg%' or p_sub_ctag like '%$ctg%'";
+        }
         $res = mysqli_query($conn, $sql);
         if ($res) {
           $num_row = mysqli_num_rows($res);
@@ -253,24 +264,34 @@ include '../../backend/common_function.php';
   </script>
 
 
-<footer>
+  <footer>
     <div class="footermain">
       <div class="app">
+        <h3>EXPERIENCE HRX APP ON MOBILE</h3>
         <a href="#">
-          <img src="img/google_play.png" alt="" srcset="">
-        </a>
-        <br>
+          <img src="../../img/google_play.png" alt="" srcset="">
+        </a><br>
         <a href="#">
-          <img src="img/apple_store.png" alt="" srcset="">
+          <img src="../../img/apple_store.png" alt="" srcset="">
         </a>
       </div>
-      
+      <div class="aboutus">
+        <h3>ABOUT US</h3>
+        <p>
+          HRX is a major Bangladeshi fashion e-commerce company headquartered in Dhaka, Bangladesh. The company was
+          founded in 2012 to sell personalized gift items. In May 2014, HRX began selling fashion and lifestyle products
+          and moved away from personalisation. By 2018 HRX offered products from 350 Bangladeshi and International
+          brands.
+        </p>
+      </div>
       <div class="social">
+        <h3>KEEP IN TOUCH
+        </h3>
         <ul>
-          <li><a href="#"><img src="img/fb.png" alt="" srcset=""></a></li>
-          <li><a href="#"><img src="img/insta.png" alt="" srcset=""></a></li>
-          <li><a href="#"><img src="img/twitter.png" alt="" srcset=""></a></li>
-          <li><a href="#"><img src="img/link.png" alt="" srcset=""></a></li>
+          <li><a href="#"><img src="../../img/fb.png" alt="" srcset=""></a></li>
+          <li><a href="#"><img src="../../img/insta.png" alt="" srcset=""></a></li>
+          <li><a href="#"><img src="../../img/twitter.png" alt="" srcset=""></a></li>
+          <li><a href="#"><img src="../../img/link.png" alt="" srcset=""></a></li>
         </ul>
       </div>
 
