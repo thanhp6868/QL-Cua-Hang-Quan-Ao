@@ -5,43 +5,43 @@
   <div>
     <div class="uper">
       <div class="dropdown">
-        <button class="dropbtn">Men</button>
+        <button class="dropbtn">Nam</button>
         <div class="dropdown-content">
-          <a href="page/Men/topware.php">Topwear</a>
-          <a href="#">Bottomwear</a>
+          <a href="page/Men/topware.php">Áo khoác vip</a>
+          <a href="#">Quần vip</a>
           <a href="#">Sports & Active wear</a>
-          <a href="#">Festive wear</a>
+          <a href="#">Quần áo vip</a>
 
-          <a href="#">Footwear</a>
-          <a href="#">Accessories</a>
+          <a href="#">Giầy vip</a>
+          <a href="#">Phụ kiện vip</a>
         </div>
       </div>
       <div class="dropdown">
-        <button class="dropbtn">Woman</button>
+        <button class="dropbtn">Nữ</button>
         <div class="dropdown-content">
-          <a href="#">Desi & Fusion wear</a>
-          <a href="#">Western wear</a>
-          <a href="#">Jewellery</a>
-          <a href="#">Sports & Active wear</a>
-          <a href="#">Footwear</a>
-          <a href="#">Accessories</a>
+          <a href="#">Áo</a>
+          <a href="#">Váy</a>
+          <a href="#">Trang sức</a>
+          <a href="#">Đồ thể thao vip</a>
+          <a href="#">Giầy vip</a>
+          <a href="#">Phụ kiện vip</a>
         </div>
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn">Kid</button>
+        <button class="dropbtn">Trẻ em</button>
         <div class="dropdown-content">
-          <a href="#">Boys Clothing</a>
-          <a href="#">Girls Clothing</a>
-          <a href="#">Boys Footwear</a>
-          <a href="#">Girls Foorwear</a>
-          <a href="#">Infants</a>
-          <a href="#">Kid Accessories</a>
+          <a href="#">Quần áo bé nam</a>
+          <a href="#">Quần áo bé nữ</a>
+          <a href="#">Giầy bé nam</a>
+          <a href="#">Giầy bé nữ</a>
+          <a href="#">Sơ sinh</a>
+          <a href="#">Phụ kiện cho trẻ</a>
 
         </div>
       </div>
 
-      <div class="dropdown">
+      <!-- <div class="dropdown">
         <button class="dropbtn">Beauty</button>
         <div class="dropdown-content">
           <a href="#">Makeup</a>
@@ -52,15 +52,14 @@
           <a href="#">Beauty Gift</a>
 
         </div>
-      </div>
+      </div> -->
       <div class="dropdown">
-        <button class="dropbtn">Accessories</button>
+        <button class="dropbtn">Phụ kiện</button>
         <div class="dropdown-content">
-          <a href="#">Watch</a>
-          <a href="#">Sunglasses</a>
-          <a href="#">Belts</a>
-          <a href="#">Bath Accessories</a>
-          <a href="#">Others</a>
+          <a href="#">Đồng hồ</a>
+          <a href="#">Kính</a>
+          <a href="#">Thắt lưng</a>
+          <a href="#">Khác</a>
 
 
         </div>

@@ -75,7 +75,11 @@ include '../backend/common_function.php';
             </div>
           </div>
 
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> 1bef28a2ad7918a10ad17018722dcb6c4b130bb1
           <div class="dropdown">
             <button class="dropbtn">Phụ kiện</button>
             <div class="dropdown-content">

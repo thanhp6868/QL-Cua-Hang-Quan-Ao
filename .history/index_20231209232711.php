@@ -33,9 +33,9 @@ include 'backend/common_function.php';
     <div>
       <div class="uper">
 
-        <form action="" method="get">
+      <form action="" method="get">
           <div class="dropdown">
-            <button class="dropbtn">Đực</button>
+            <button class="dropbtn">Nam</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Men/Đồ thể thao nam" name="ctg">Đồ thể thao vip</a>
               <a href="page/Men/topware.php?ctg=Men/Áo khoác nam" name="ctg">Áo khoác vip</a>
@@ -47,7 +47,7 @@ include 'backend/common_function.php';
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn">Cái</button>
+            <button class="dropbtn">Nữ</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Woman/Áo nữ">Áo</a>
               <a href="page/Men/topware.php?ctg=Woman/Váy">Váy</a>
@@ -59,7 +59,7 @@ include 'backend/common_function.php';
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn">Non</button>
+            <button class="dropbtn">Trẻ em</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nam">Quần áo bé nam</a>
               <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nữ">Quần áo bé nữ</a>

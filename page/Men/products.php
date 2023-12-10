@@ -30,67 +30,56 @@ include '../../backend/common_function.php';
     <div class="logo"><a href="index.php"><img src="img/icon.png" alt="" srcset=""></a></div>
     <div>
       <div class="uper">
-        <form action="" method="get">
+      <form action="" method="get">
           <div class="dropdown">
-            <button class="dropbtn">Men</button>
+            <button class="dropbtn">Nam</button>
             <div class="dropdown-content">
-              <a href="topware.php?ctg=Men/Sports and Active wear" name="ctg">Sports and Active wear</a>
-              <a href="topware.php?ctg=Men/Topwear" name="ctg">Topwear</a>
-              <a href="topware.php?ctg=Men/Bottomwear" name="ctg">Bottomwear</a>
-              <a href="topware.php?ctg=Men/Festive wear" name="ctg">Festive wear</a>
+              <a href="page/Men/topware.php?ctg=Men/Đồ thể thao nam" name="ctg">Đồ thể thao vip</a>
+              <a href="page/Men/topware.php?ctg=Men/Áo khoác nam" name="ctg">Áo khoác vip</a>
+              <a href="page/Men/topware.php?ctg=Men/Quần nam" name="ctg">Quần vip</a>
+              <a href="page/Men/topware.php?ctg=Men/Quần áo nam" name="ctg">Quần áo vip</a>
 
-              <a href="topware.php?ctg=Men/Footwear" name="ctg">Footwear</a>
-              <a href="topware.php?ctg=Men/Accessories" name="ctg">Accessories</a>
+              <a href="page/Men/topware.php?ctg=Men/Giầy nam" name="ctg">Giầy vip</a>
+              <a href="page/Men/topware.php?ctg=Men/Phụ kiện nam" name="ctg">Phụ kiện vip</a>
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn">Woman</button>
+            <button class="dropbtn">Nữ</button>
             <div class="dropdown-content">
-              <a href="topware.php?ctg=Woman/Desi and Fusion wear">Desi and Fusion wear</a>
-              <a href="topware.php?ctg=Woman/Western wear">Western wear</a>
-              <a href="topware.php?ctg=Woman/Jewellery">Jewellery</a>
-              <a href="topware.php?ctg=Woman/Sports and Active wear">Sports and Active wear</a>
-              <a href="topware.php?ctg=Woman/Footwear">Footwear</a>
-              <a href="topware.php?ctg=Woman/Accessories">Accessories</a>
-            </div>
-          </div>
-
-          <div class="dropdown">
-            <button class="dropbtn">Kid</button>
-            <div class="dropdown-content">
-              <a href="topware.php?ctg=Kid/Boys Clothing">Boys Clothing</a>
-              <a href="topware.php?ctg=Kid/Girls Clothing">Girls Clothing</a>
-              <a href="topware.php?ctg=Kid/Boys Footwear">Boys Footwear</a>
-              <a href="topware.php?ctg=Kid/Girls Foorwear">Girls Foorwear</a>
-              <a href="topware.php?ctg=Kid/Infants">Infants</a>
-              <a href="topware.php?ctg=Kid/Kid Accessories">Kid Accessories</a>
-
+              <a href="page/Men/topware.php?ctg=Woman/Áo nữ">Áo</a>
+              <a href="page/Men/topware.php?ctg=Woman/Váy">Váy</a>
+              <a href="page/Men/topware.php?ctg=Woman/Trang sức">Trang sức</a>
+              <a href="page/Men/topware.php?ctg=Woman/Đồ thể thao nữ">Đồ thể thao vip</a>
+              <a href="page/Men/topware.php?ctg=Woman/Giầy nữ">Giầy vip</a>
+              <a href="page/Men/topware.php?ctg=Woman/Phụ kiện nữ">Phụ kiện vip</a>
             </div>
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn">Beauty</button>
+            <button class="dropbtn">Trẻ em</button>
             <div class="dropdown-content">
-              <a href="topware.php?ctg=Beauty/Makeup">Makeup</a>
-              <a href="topware.php?ctg=Beauty/Skincare,Bath and Body">Skincare,Bath and Body</a>
-              <a href="topware.php?ctg=Beauty/Haircare">Haircare</a>
-              <a href="topware.php?ctg=Beauty/Fragrances">Fragrances</a>
-              <a href="topware.php?ctg=Beauty/Men Grooming">Men Grooming</a>
-              <a href="topware.php?ctg=Beauty/Beauty Gift">Beauty Gift</a>
+              <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nam">Quần áo bé nam</a>
+              <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nữ">Quần áo bé nữ</a>
+              <a href="page/Men/topware.php?ctg=Kid/Giầy bé nam">Giầy bé nam</a>
+              <a href="page/Men/topware.php?ctg=Kid/Giầy bé nữ">Giầy bé nữ</a>
+              <a href="page/Men/topware.php?ctg=Kid/Sơ sinh">Sơ sinh</a>
+              <a href="page/Men/topware.php?ctg=Kid/Phụ kiện cho trẻ">Phụ kiện cho trẻ</a>
 
             </div>
           </div>
+
+          
           <div class="dropdown">
-            <button class="dropbtn">Accessories</button>
+            <button class="dropbtn">Phụ kiện</button>
             <div class="dropdown-content">
-              <a href="topware.php?ctg=Accessories/Watch">Watch</a>
-              <a href="topware.php?ctg=Accessories/Sunglasses">Sunglasses</a>
-              <a href="topware.php?ctg=Accessories/Belts">Belts</a>
-              <a href="topware.php?ctg=Accessories/Bath Accessories">Bath Accessories</a>
-              <a href="topware.php?ctg=Accessories/Others">Others</a>
+              <a href="page/Men/topware.php?ctg=Accessories/Đồng hồ">Đồng hồ</a>
+              <a href="page/Men/topware.php?ctg=Accessories/Kính">Kính</a>
+              <a href="page/Men/topware.php?ctg=Accessories/Thắt lưng">Thắt lưng</a>
+              <a href="page/Men/topware.php?ctg=Accessories/Khác">Khác</a>
             </div>
           </div>
         </form>
+        
       </div>
     </div>
     <form action="search_products.php" method="post"><input class="search" type="search" name="search_key" id="" placeholder="search for products, bands and more"></form>
