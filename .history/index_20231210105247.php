@@ -12,21 +12,15 @@ include 'backend/common_function.php';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="shortcut icon" href="img/fab.png" type="image/x-icon">
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-  <script type="text/javascript"
-    src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
+  <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
   <script src="js/js_own.js"></script>
 
   <title>Home</title>
@@ -41,7 +35,7 @@ include 'backend/common_function.php';
 
         <form action="" method="get">
           <div class="dropdown">
-            <button class="dropbtn">Nam</button>
+            <button class="dropbtn">Đực</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Men/Đồ thể thao nam" name="ctg">Đồ thể thao vip</a>
               <a href="page/Men/topware.php?ctg=Men/Áo khoác nam" name="ctg">Áo khoác vip</a>
@@ -53,7 +47,7 @@ include 'backend/common_function.php';
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn">Nữ</button>
+            <button class="dropbtn">Cái</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Woman/Áo nữ">Áo</a>
               <a href="page/Men/topware.php?ctg=Woman/Váy">Váy</a>
@@ -65,7 +59,7 @@ include 'backend/common_function.php';
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn">Trẻ em</button>
+            <button class="dropbtn">Non</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nam">Quần áo bé nam</a>
               <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nữ">Quần áo bé nữ</a>
@@ -77,7 +71,7 @@ include 'backend/common_function.php';
             </div>
           </div>
 
-
+          
           <div class="dropdown">
             <button class="dropbtn">Phụ kiện</button>
             <div class="dropdown-content">
@@ -92,8 +86,7 @@ include 'backend/common_function.php';
 
       </div>
     </div>
-    <form action="page/Men/search_products.php" method="post"><input class="search" type="search" name="search_key"
-        id="" placeholder="search for products, bands and more"></form>
+    <form action="page/Men/search_products.php" method="post"><input class="search" type="search" name="search_key" id="" placeholder="search for products, bands and more"></form>
 
     <div class="dropdown2">
       <?php
@@ -103,7 +96,7 @@ include 'backend/common_function.php';
         <p>Profile</p>
       </a>';
       } else {
-        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Đăng nhập</button>';
+        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Login</button>';
       }
       ?>
       <!-- <button type="submit" class="dropbtn2" onclick="loginpage()">Login</button> -->
@@ -128,30 +121,30 @@ include 'backend/common_function.php';
 
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                <label class="form-check-label" for="form2Example31"> Nhớ mật khẩu </label>
+                <label class="form-check-label" for="form2Example31"> Remember me </label>
               </div>
             </div>
 
             <div class="col">
 
-              <a href="page/forgot_password.php">Quên mật khẩu</a>
+              <a href="page/forgot_password.php">Forgot password?</a>
             </div>
           </div>
 
 
-          <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Đăng nhập</button>
+          <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Sign in</button>
 
 
           <div class="text-center">
-            <p>Chưa có tài khoản <a href="page/reg.php"> Đăng ký </a></p>
-            <p> hoặc đăng nhập với: </p>
+            <p>Not a member? <a href="page/reg.php">Register</a></p>
+            <p>or sign up with:</p>
             <button type="button" class="btn btn-link btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
               <i class='bx bxl-facebook-circle fa-5x' style='color:#4b5af6'></i>
             </button>
 
             <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-google fa-5x"></i>
+              <i class="fab fa-google"></i>
             </button>
 
             <button type="button" class="btn btn-link btn-floating mx-1">
@@ -174,11 +167,9 @@ include 'backend/common_function.php';
 
       <div class="dropdown headerimg">
         <a href="page/cart.php">
-          <img src="img/cart.png" alt="" srcset=""><sup>
-            <?php $cart = ItemInCart();
-            echo $cart; ?>
-          </sup>
-          <p>Giỏ hàng</p>
+          <img src="img/cart.png" alt="" srcset=""><sup><?php $cart = ItemInCart();
+                                                        echo $cart; ?></sup>
+          <p>Cart</p>
         </a>
       </div>
     </div>
@@ -226,14 +217,14 @@ include 'backend/common_function.php';
     <a href="page/men.php">
       <div class="c_img_bg">
         <img src="img/men.png" alt="">
-        <h3>Nam</h3>
+        <h3>Đực</h3>
 
       </div>
     </a>
     <a href="page/Men/all_product.php?ctg=Woman">
       <div class="c_img_bg">
         <img src="img/woman.png" alt="">
-        <h3>Nữ</h3>
+        <h3>Cái</h3>
       </div>
     </a>
     <a href="page/Men/all_product.php?ctg=Bagpack">

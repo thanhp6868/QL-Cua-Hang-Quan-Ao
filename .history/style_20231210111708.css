@@ -165,14 +165,14 @@ body {
 }
 
 .search {
-    top: -40px;
-    height: 40px;
+    top: -32px;
+    height: 34px;
     width: 296px;
     float: right;
     right: 22%;
     border-radius: 10px;
-    background: white;
-    /* background: linear-gradient(90deg, rgba(246, 208, 251, 1) 0%, rgba(221, 149, 224, 1) 100%); */
+    background: rgb(246, 208, 251);
+    background: linear-gradient(90deg, rgba(246, 208, 251, 1) 0%, rgba(221, 149, 224, 1) 100%);
 }
 
 .headerimg {

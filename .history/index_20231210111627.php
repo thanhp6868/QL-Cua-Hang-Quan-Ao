@@ -226,14 +226,14 @@ include 'backend/common_function.php';
     <a href="page/men.php">
       <div class="c_img_bg">
         <img src="img/men.png" alt="">
-        <h3>Nam</h3>
+        <h3>Đực</h3>
 
       </div>
     </a>
     <a href="page/Men/all_product.php?ctg=Woman">
       <div class="c_img_bg">
         <img src="img/woman.png" alt="">
-        <h3>Nữ</h3>
+        <h3>Cái</h3>
       </div>
     </a>
     <a href="page/Men/all_product.php?ctg=Bagpack">
