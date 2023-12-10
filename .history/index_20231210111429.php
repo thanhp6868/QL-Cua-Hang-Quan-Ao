@@ -41,7 +41,7 @@ include 'backend/common_function.php';
 
         <form action="" method="get">
           <div class="dropdown">
-            <button class="dropbtn">Nam</button>
+            <button class="dropbtn">Đực</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Men/Đồ thể thao nam" name="ctg">Đồ thể thao vip</a>
               <a href="page/Men/topware.php?ctg=Men/Áo khoác nam" name="ctg">Áo khoác vip</a>
@@ -53,7 +53,7 @@ include 'backend/common_function.php';
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn">Nữ</button>
+            <button class="dropbtn">Cái</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Woman/Áo nữ">Áo</a>
               <a href="page/Men/topware.php?ctg=Woman/Váy">Váy</a>
@@ -65,7 +65,7 @@ include 'backend/common_function.php';
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn">Trẻ em</button>
+            <button class="dropbtn">Non</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nam">Quần áo bé nam</a>
               <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nữ">Quần áo bé nữ</a>
@@ -178,7 +178,7 @@ include 'backend/common_function.php';
             <?php $cart = ItemInCart();
             echo $cart; ?>
           </sup>
-          <p>Giỏ hàng</p>
+          <p>Giỏi hàng</p>
         </a>
       </div>
     </div>
