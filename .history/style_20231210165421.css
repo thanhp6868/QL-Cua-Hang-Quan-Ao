@@ -463,7 +463,7 @@ footer {
 }
 
 .p_show {
-    width: 100%;
+    /* width: ; */
     align-items: left;
     align-content: left;
     position: relative;
@@ -475,7 +475,7 @@ footer {
 .ctag_u {
     align-items: left;
     display: inline;
-    width: 100px;
+    width: 100%;
     position: relative;
     margin-top: 100px;
     margin-left: 20px;

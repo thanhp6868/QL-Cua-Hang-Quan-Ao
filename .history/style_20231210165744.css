@@ -474,7 +474,7 @@ footer {
 
 .ctag_u {
     align-items: left;
-    display: inline;
+    /* display: flex; */
     width: 100px;
     position: relative;
     margin-top: 100px;

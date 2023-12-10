@@ -475,7 +475,7 @@ footer {
 .ctag_u {
     align-items: left;
     display: inline;
-    width: 100px;
+    width: 100%;
     position: relative;
     margin-top: 100px;
     margin-left: 20px;
@@ -848,7 +848,8 @@ footer {
 .index_pro_show {
     top: 0px;
     margin-bottom: 30px;
-   
+    height: auto;
+    width: 300px;
 
 }
 

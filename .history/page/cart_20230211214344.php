@@ -37,56 +37,67 @@ include '../backend/common_function.php';
     <div class="logo"><a href="index.php"><img src="img/icon.png" alt="" srcset=""></a></div>
     <div>
       <div class="uper">
-      <form action="" method="get">
+        <form action="" method="get">
           <div class="dropdown">
-            <button class="dropbtn">Nam</button>
+            <button class="dropbtn">Men</button>
             <div class="dropdown-content">
-              <a href="page/Men/topware.php?ctg=Men/Đồ thể thao nam" name="ctg">Đồ thể thao vip</a>
-              <a href="page/Men/topware.php?ctg=Men/Áo khoác nam" name="ctg">Áo khoác vip</a>
-              <a href="page/Men/topware.php?ctg=Men/Quần nam" name="ctg">Quần vip</a>
-              <a href="page/Men/topware.php?ctg=Men/Quần áo nam" name="ctg">Quần áo vip</a>
+              <a href="Men/topware.php?ctg=Men/Sports and Active wear" name="ctg">Sports and Active wear</a>
+              <a href="Men/topware.php?ctg=Men/Topwear" name="ctg">Topwear</a>
+              <a href="Men/topware.php?ctg=Men/Bottomwear" name="ctg">Bottomwear</a>
+              <a href="Men/topware.php?ctg=Men/Festive wear" name="ctg">Festive wear</a>
 
-              <a href="page/Men/topware.php?ctg=Men/Giầy nam" name="ctg">Giầy vip</a>
-              <a href="page/Men/topware.php?ctg=Men/Phụ kiện nam" name="ctg">Phụ kiện vip</a>
+              <a href="Men/topware.php?ctg=Men/Footwear" name="ctg">Footwear</a>
+              <a href="Men/topware.php?ctg=Men/Accessories" name="ctg">Accessories</a>
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn">Nữ</button>
+            <button class="dropbtn">Woman</button>
             <div class="dropdown-content">
-              <a href="page/Men/topware.php?ctg=Woman/Áo nữ">Áo</a>
-              <a href="page/Men/topware.php?ctg=Woman/Váy">Váy</a>
-              <a href="page/Men/topware.php?ctg=Woman/Trang sức">Trang sức</a>
-              <a href="page/Men/topware.php?ctg=Woman/Đồ thể thao nữ">Đồ thể thao vip</a>
-              <a href="page/Men/topware.php?ctg=Woman/Giầy nữ">Giầy vip</a>
-              <a href="page/Men/topware.php?ctg=Woman/Phụ kiện nữ">Phụ kiện vip</a>
+              <a href="Men/topware.php?ctg=Woman/Desi and Fusion wear">Desi and Fusion wear</a>
+              <a href="Men/topware.php?ctg=Woman/Western wear">Western wear</a>
+              <a href="Men/topware.php?ctg=Woman/Jewellery">Jewellery</a>
+              <a href="Men/topware.php?ctg=Woman/Sports and Active wear">Sports and Active wear</a>
+              <a href="Men/topware.php?ctg=Woman/Footwear">Footwear</a>
+              <a href="Men/topware.php?ctg=Woman/Accessories">Accessories</a>
             </div>
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn">Trẻ em</button>
+            <button class="dropbtn">Kid</button>
             <div class="dropdown-content">
-              <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nam">Quần áo bé nam</a>
-              <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nữ">Quần áo bé nữ</a>
-              <a href="page/Men/topware.php?ctg=Kid/Giầy bé nam">Giầy bé nam</a>
-              <a href="page/Men/topware.php?ctg=Kid/Giầy bé nữ">Giầy bé nữ</a>
-              <a href="page/Men/topware.php?ctg=Kid/Sơ sinh">Sơ sinh</a>
-              <a href="page/Men/topware.php?ctg=Kid/Phụ kiện cho trẻ">Phụ kiện cho trẻ</a>
+              <a href="Men/topware.php?ctg=Kid/Boys Clothing">Boys Clothing</a>
+              <a href="Men/topware.php?ctg=Kid/Girls Clothing">Girls Clothing</a>
+              <a href="Men/topware.php?ctg=Kid/Boys Footwear">Boys Footwear</a>
+              <a href="Men/topware.php?ctg=Kid/Girls Foorwear">Girls Foorwear</a>
+              <a href="Men/topware.php?ctg=Kid/Infants">Infants</a>
+              <a href="Men/topware.php?ctg=Kid/Kid Accessories">Kid Accessories</a>
 
             </div>
           </div>
 
-
           <div class="dropdown">
-            <button class="dropbtn">Phụ kiện</button>
+            <button class="dropbtn">Beauty</button>
             <div class="dropdown-content">
-              <a href="page/Men/topware.php?ctg=Accessories/Đồng hồ">Đồng hồ</a>
-              <a href="page/Men/topware.php?ctg=Accessories/Kính">Kính</a>
-              <a href="page/Men/topware.php?ctg=Accessories/Thắt lưng">Thắt lưng</a>
-              <a href="page/Men/topware.php?ctg=Accessories/Khác">Khác</a>
+              <a href="Men/topware.php?ctg=Beauty/Makeup">Makeup</a>
+              <a href="Men/topware.php?ctg=Beauty/Skincare,Bath and Body">Skincare,Bath and Body</a>
+              <a href="Men/topware.php?ctg=Beauty/Haircare">Haircare</a>
+              <a href="Men/topware.php?ctg=Beauty/Fragrances">Fragrances</a>
+              <a href="Men/topware.php?ctg=Beauty/Men Grooming">Men Grooming</a>
+              <a href="Men/topware.php?ctg=Beauty/Beauty Gift">Beauty Gift</a>
+
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Accessories</button>
+            <div class="dropdown-content">
+              <a href="Men/topware.php?ctg=Accessories/Watch">Watch</a>
+              <a href="Men/topware.php?ctg=Accessories/Sunglasses">Sunglasses</a>
+              <a href="Men/topware.php?ctg=Accessories/Belts">Belts</a>
+              <a href="Men/topware.php?ctg=Accessories/Bath Accessories">Bath Accessories</a>
+              <a href="Men/topware.php?ctg=Accessories/Others">Others</a>
             </div>
           </div>
         </form>
-
       </div>
     </div>
     <form action="Men/search_products.php" method="post"><input class="search" type="search" name="search_key" id="" placeholder="search for products, bands and more"></form>
@@ -94,12 +105,12 @@ include '../backend/common_function.php';
     <div class="dropdown2">
       <?php
       if (isset($_SESSION['username'])) {
-        echo '<a href="user_area/profile.php" style="top:-20px; color: white; !important">
+        echo '<a href="../user_area/profile.php" style="top:-20px; color: white; !important">
         <img src="img/profile.png" alt="" srcset=""  style="width:20px; !important">
         <p>Profile</p>
       </a>';
       } else {
-        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Đăng nhập</button>';
+        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Login</button>';
       }
       ?>
       <!-- <button type="submit" class="dropbtn2" onclick="loginpage()">Login</button> -->
@@ -124,30 +135,29 @@ include '../backend/common_function.php';
 
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                <label class="form-check-label" for="form2Example31"> Nhớ mật khẩu </label>
+                <label class="form-check-label" for="form2Example31"> Remember me </label>
               </div>
             </div>
 
             <div class="col">
 
-              <a href="page/forgot_password.php">Quên mật khẩu</a>
+              <a href="forgot_password.php">Forgot password?</a>
             </div>
           </div>
 
 
-          <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Đăng nhập</button>
+          <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Sign in</button>
 
 
           <div class="text-center">
-            <p>Chưa có tài khoản <a href="page/reg.php"> Đăng ký </a></p>
-            <p> hoặc đăng nhập với: </p>
+            <p>Not a member? <a href="reg.php">Register</a></p>
+            <p>or sign up with:</p>
             <button type="button" class="btn btn-link btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
-              <i class='bx bxl-facebook-circle fa-5x' style='color:#4b5af6'></i>
             </button>
 
             <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-google fa-5x"></i>
+              <i class="fab fa-google"></i>
             </button>
 
             <button type="button" class="btn btn-link btn-floating mx-1">
@@ -186,8 +196,8 @@ include '../backend/common_function.php';
                 <div class="col-lg-8">
                   <div class="p-5">
                     <div class="d-flex justify-content-between align-items-center mb-5">
-                      <h1 class="fw-bold mb-0 text-black">Giỏ hàng</h1>
-                      <h6 class="mb-0 text-muted"><?php echo $row_count; ?> sản phẩm</h6>
+                      <h1 class="fw-bold mb-0 text-black">Shopping Cart</h1>
+                      <h6 class="mb-0 text-muted"><?php echo $row_count; ?> items</h6>
                     </div>
 
                     <?php
@@ -227,7 +237,7 @@ include '../backend/common_function.php';
                               
                             </div>
                             <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                              <h6 class="mb-0"> ' . $p_price . 'VNĐ</h6>
+                              <h6 class="mb-0">৳ ' . $p_price . '</h6>
                             </div>
                             <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                             <a href="remove_from_cart.php?p_id=' . $p_id . '"><img src="img/delete.png" alt="delete" style="width:22px;height:auto"></a>
@@ -240,7 +250,7 @@ include '../backend/common_function.php';
                       }
                     } else {
                       echo '<div class="alert alert-warning" role="alert">
-                      <h3>Giỏ hàng trống</h3>
+                      <h3>Oops! Your Cart is empty add some product to your cart   </h3>
                     </div>';
                     }
                     ?>
@@ -251,47 +261,48 @@ include '../backend/common_function.php';
                     <hr class="my-4">
 
                     <div class="pt-5">
-                      <h6 class="mb-0"><a href="../index.php" class="text-body"><i class="fas fa-long-arrow-alt-left me-2"></i>Tiếp tục mua sắm</a></h6>
+                      <h6 class="mb-0"><a href="../index.php" class="text-body"><i class="fas fa-long-arrow-alt-left me-2"></i>Back to shop</a></h6>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-4 bg-grey">
                   <div class="p-5">
-                    <h3 class="fw-bold mb-5 mt-2 pt-1">Thông tin đơn hàng</h3>
+                    <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
                     <hr class="my-4">
 
                     <div class="d-flex justify-content-between mb-4">
-                      <h5 class="text-uppercase"> <?php echo $row_count; ?> sản phẩm</h5>
+                      <h5 class="text-uppercase">items <?php echo $row_count; ?></h5>
                       <?php
                       if ($row_count > 0) {
-                        echo '<h5>  ' . $total . ' VNĐ</h5>';
+                        echo '<h5>৳  ' . $total . ' </h5>';
                       }
                       ?>
 
                     </div>
 
-                    <h5 class=" mb-3">Hình thức vận chuyển</h5>
+                    <h5 class="text-uppercase mb-3">Shipping</h5>
 
                     <div class="mb-4 pb-2">
                       <form action="" method="post">
                         <select class="select" name="tax" style="margin-bottom: 5px !important">
-                          <option>Chọn hình thức vận chuyển</option>
-                          <option value="15000">Tiêu chuẩn(4-5 ngày)- 15.000 VNĐ</option>
-                          <option value="30000">Nhanh(3-4 ngày)- 30.000 VNĐ</option>
-                          <option value="50000">Hoả tốc(1 ngày)- 50.000 VNĐ</option>
+                          <option>Choose a delivery method</option>
+                          <option value="50">Standard-Delivery(2-3 Days)- ৳ 50</option>
+                          <option value="100">Fast-Delivery(1 Day)- ৳ 100</option>
+                          <option value="0">Ferr-Delivery(5-7 Days)- ৳ 00</option>
+                          <option value="0">Collect From Check Point -৳ 00 </option>
                         </select>
                         <button type="submit" class="btn btn-outline-secondary" style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;" name="payment_submit">
-                         Xác nhận
+                          Confirm Delivery Method
                         </button>
                       </form>
                     </div>
 
-                    <h5 class="text-uppercase mb-3">Mã giảm giá</h5>
+                    <h5 class="text-uppercase mb-3">Give code</h5>
 
                     <div class="mb-5">
                       <div class="form-outline">
                         <input type="text" id="form3Examplea2" class="form-control form-control-lg" />
-                      
+                        <label class="form-label" for="form3Examplea2">Enter your code</label>
                       </div>
                     </div>
 
@@ -303,12 +314,12 @@ include '../backend/common_function.php';
                     }
                     ?>
                     <div class="d-flex justify-content-between mb-5">
-                      <h5 class="text-uppercase">Tổng: </h5>
+                      <h5 class="text-uppercase">Total price</h5>
                       <?php
                       if ($row_count > 0) {
-                        echo '<h5>  ' . $total + $tax . ' VNĐ</h5>';
+                        echo '<h5>৳  ' . $total + $tax . ' </h5>';
                       } else {
-                        echo '<h5> 0 VNĐ</h5>';
+                        echo '<h5>৳  0 </h5>';
                       }
                       ?>
 
@@ -317,11 +328,11 @@ include '../backend/common_function.php';
                     <?php
                     if (isset($_SESSION['username'])) {
                       if ($row_count > 0) {
-                        echo '<button type="button" class="btn btn-dark btn-block btn-lg" data-mdb-ripple-color="dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Thanh toán</button>';
+                        echo '<button type="button" class="btn btn-dark btn-block btn-lg" data-mdb-ripple-color="dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</button>';
                       }
                       // echo '<a href="checkout.php"><button type="button" class="btn btn-dark btn-block btn-lg" data-mdb-ripple-color="dark">Checkout</button></a>';
                     } else {
-                      echo '<label class="form-label" for="form3Examplea2">Hãy đăng nhập để nua hàng</label>';
+                      echo '<label class="form-label" for="form3Examplea2">Please, login first to checkout</label>';
                     }
                     ?>
 
@@ -342,20 +353,23 @@ include '../backend/common_function.php';
     <!-- <div class="modal-dialog"> -->
     <div class="modal-dialog modal-dialog-centered ">
       <div class="modal-content">
-        
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Choose Payment Method</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
         <div class="modal-body">
           <div class="form-popup" id="myForm">
             <div class="col-xl-12 bg-grey">
               <div class="p-5">
-                <h3 class="fw-bold mb-5 mt-2 pt-1">Đặt hàng</h3>
+                <h3 class="fw-bold mb-5 mt-2 pt-1">Order</h3>
                 <hr class="my-4">
 
 
 
-                <h5 class="text-uppercase mb-3">Chọn phương thức thanh toán</h5>
+                <h5 class="text-uppercase mb-3">Select Payment Method</h5>
 
                 <!-- if bkash or bitcoin Select h3 will show -->
-                <h3 style="color: #d42c2c; display:none;" id="message">Hiện không khả dụng</h3>
+                <h3 style="color: #d42c2c; display:none;" id="message">Currently Not available</h3>
                 <!-- <form action="" method="post"> -->
                 <label class="radio_img">
                   <input type="radio" name="test" value="small" checked onclick="ErrorSolve()">
@@ -375,7 +389,7 @@ include '../backend/common_function.php';
                 <br>
                 <br>
                 <br>
-                <a href="confirm_order.php?data=<?php echo $total . "/" . $row_count ?>" id="con_btn"><button class="btn btn-primary disabled" role="button" aria-disabled="true">Xác nhận đặt hàng</button></a>
+                <a href="confirm_order.php?data=<?php echo $total . "/" . $row_count ?>" id="con_btn"><button class="btn btn-primary disabled" role="button" aria-disabled="true">Confirm Order</button></a>
 
               </div>
             </div>

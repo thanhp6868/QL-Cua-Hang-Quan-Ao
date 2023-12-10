@@ -473,6 +473,7 @@ footer {
 }
 
 .ctag_u {
+    background-color: #000000;
     align-items: left;
     display: inline;
     width: 100px;

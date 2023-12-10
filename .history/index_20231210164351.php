@@ -204,7 +204,7 @@ include 'backend/common_function.php';
             <div class="c_img_bg_u ">
               <img class="ctag_img_u" src="page/Men/img/' . $p_img . '" alt="">
               <h3>' . $p_name . '</h3>
-              <h4>' . number_format($p_price, 0, ',', '.') . ' VNĐ' . '</h4>
+              <h4>' . number_format($p_price, 0, ',', '.') . ' đ' . '</h4>
           </a>
           <a href="add_to_cart.php?add_to_cart=' . $p_id . "/" . $p_price . '"><button class="add_to_cart"> Add to Cart </button></a>
         </div>';

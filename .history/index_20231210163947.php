@@ -92,7 +92,7 @@ include 'backend/common_function.php';
 
       </div>
     </div>
-    <form action="page/Men/search_products.php" method="post"><input class="search" type="search" name="search_key"
+    <form action="page/Men/search_products.php" method="post"><input class="search" type="search" name="search_key" 
         id="" placeholder="search for products, bands and more">
     </form>
 
@@ -190,7 +190,7 @@ include 'backend/common_function.php';
     <h2>Sản phẩm mới</h2>
     <div class="p_show">
       <?php
-      $sql = "select * from product ";
+      $sql = "select * from product order by p_date desc limit 9";
       $res = mysqli_query($conn, $sql);
       if ($res) {
         while ($row = mysqli_fetch_array($res)) {
@@ -204,7 +204,7 @@ include 'backend/common_function.php';
             <div class="c_img_bg_u ">
               <img class="ctag_img_u" src="page/Men/img/' . $p_img . '" alt="">
               <h3>' . $p_name . '</h3>
-              <h4>' . number_format($p_price, 0, ',', '.') . ' VNĐ' . '</h4>
+              <h4>' . CURRENCY . $p_price . '</h4>
           </a>
           <a href="add_to_cart.php?add_to_cart=' . $p_id . "/" . $p_price . '"><button class="add_to_cart"> Add to Cart </button></a>
         </div>';
