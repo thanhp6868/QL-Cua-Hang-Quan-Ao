@@ -35,7 +35,7 @@ include 'backend/common_function.php';
 
         <form action="" method="get">
           <div class="dropdown">
-            <button class="dropbtn">Đực</button>
+            <button class="dropbtn">Nam</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Men/Đồ thể thao nam" name="ctg">Đồ thể thao vip</a>
               <a href="page/Men/topware.php?ctg=Men/Áo khoác nam" name="ctg">Áo khoác vip</a>
@@ -47,7 +47,7 @@ include 'backend/common_function.php';
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn">Cái</button>
+            <button class="dropbtn">Nữ</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Woman/Áo nữ">Áo</a>
               <a href="page/Men/topware.php?ctg=Woman/Váy">Váy</a>
@@ -59,7 +59,7 @@ include 'backend/common_function.php';
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn">Non</button>
+            <button class="dropbtn">Trẻ em</button>
             <div class="dropdown-content">
               <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nam">Quần áo bé nam</a>
               <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nữ">Quần áo bé nữ</a>
@@ -217,14 +217,14 @@ include 'backend/common_function.php';
     <a href="page/men.php">
       <div class="c_img_bg">
         <img src="img/men.png" alt="">
-        <h3>Đực</h3>
+        <h3>Nam</h3>
 
       </div>
     </a>
     <a href="page/Men/all_product.php?ctg=Woman">
       <div class="c_img_bg">
         <img src="img/woman.png" alt="">
-        <h3>Cái</h3>
+        <h3>Nữ</h3>
       </div>
     </a>
     <a href="page/Men/all_product.php?ctg=Bagpack">
