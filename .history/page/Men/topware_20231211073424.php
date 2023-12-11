@@ -133,8 +133,8 @@ include '../../backend/common_function.php';
 
 
           <div class="text-center">
-            <p>Chưa có tài khoản? <a href="../reg.php">Đăng kí</a></p>
-            <p>hoặc đăng nhập với:</p>
+            <p>Not a member? <a href="../reg.php">Đăng kí</a></p>
+            <p>hoặc đăng kí với:</p>
             <button type="button" class="btn btn-link btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
             </button>

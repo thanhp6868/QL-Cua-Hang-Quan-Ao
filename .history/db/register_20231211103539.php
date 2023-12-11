@@ -10,7 +10,7 @@
 	$address1=$_POST['address1'];
 	$address2=$_POST['address2'];
 	$name = "/^[A-Z][a-zA-Z ]+$/";
-	$emailValidation = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(\.[a-z]{2,4})$/";
+	$emailValidation = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(\.[a-z]{2,4})$/"; 
 	$number = "/^[0-9]+$/";
 
 
