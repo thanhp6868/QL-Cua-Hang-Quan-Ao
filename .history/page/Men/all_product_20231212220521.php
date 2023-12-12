@@ -38,7 +38,7 @@ include '../../backend/common_function.php';
     <div class="logo"><a href="index.php"><img src="img/icon.png" alt="" srcset=""></a></div>
     <div>
       <div class="uper">
-      <form action="" method="get">
+        <form action="" method="get">
           <div class="dropdown">
             <button class="dropbtn">Đực</button>
             <div class="dropdown-content">
@@ -76,7 +76,7 @@ include '../../backend/common_function.php';
             </div>
           </div>
 
-          
+
           <div class="dropdown">
             <button class="dropbtn">Phụ kiện</button>
             <div class="dropdown-content">
@@ -95,12 +95,12 @@ include '../../backend/common_function.php';
     <div class="dropdown2">
       <?php
       if (isset($_SESSION['username'])) {
-        echo '<a href="../../user_area/profile.php" style="top:-20px; color: white; !important">
+        echo '<a href="../../backend/user_logout.php" style="top:-20px; color: white; !important">
         <img src="img/profile.png" alt="" srcset=""  style="width:20px; !important">
         <p>Profile</p>
       </a>';
       } else {
-        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Đăng nhập</button>';
+        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Login</button>';
       }
       ?>
       <!-- <button type="submit" class="dropbtn2" onclick="loginpage()">Login</button> -->
@@ -136,11 +136,11 @@ include '../../backend/common_function.php';
           </div>
 
 
-          <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Sign in</button>
+          <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Đăng nhập</button>
 
 
           <div class="text-center">
-            <p>Không có tài khoản? <a href="../reg.php">Đăng ký</a></p>
+            <p>Chưa có tài khoản? <a href="../reg.php">Đăng ký</a></p>
             <p>hoặc đăng nhập bằng:</p>
             <button type="button" class="btn btn-link btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
@@ -173,7 +173,7 @@ include '../../backend/common_function.php';
             <?php $cart = ItemInCart();
             echo $cart; ?>
           </sup>
-          <p>Giỏ hàng</p>
+          <p>Cart</p>
         </a>
       </div>
     </div>
@@ -186,7 +186,7 @@ include '../../backend/common_function.php';
       $ctg = $_GET['ctg'];
     }
     ?>
-    
+
     <div class="p_show">
 
       <!-- call product function to display all products -->
@@ -221,12 +221,12 @@ include '../../backend/common_function.php';
                <h4>৳.' . $product_price . '</h4>
            </a>
         
-           <a href="../../add_to_cart.php?add_to_cart=' . $product_id . "/" . $product_price . '"><button class="add_to_cart"> Thêm vào giỏ  </button></a>
+           <a href="../../add_to_cart.php?add_to_cart=' . $product_id . "/" . $product_price . '"><button class="add_to_cart"> Add to Cart </button></a>
          </div>';
             }
           } else {
             echo '<div class="alert alert-warning" role="alert">
-            <h3>Hết hàng</h3>
+            <h3>Related product currently not available</h3>
           </div>';
           }
         } else {
@@ -250,7 +250,7 @@ include '../../backend/common_function.php';
   </script>
 
 
-<footer>
+  <footer>
     <div class="footermain">
       <div class="app">
         <a href="#">
@@ -261,7 +261,7 @@ include '../../backend/common_function.php';
           <img src="img/apple_store.png" alt="" srcset="">
         </a>
       </div>
-      
+
       <div class="social">
         <ul>
           <li><a href="#"><img src="img/fb.png" alt="" srcset=""></a></li>

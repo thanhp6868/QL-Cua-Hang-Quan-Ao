@@ -9,8 +9,9 @@
         <div class="dropdown-content">
           <a href="page/Men/topware.php">Áo khoác vip</a>
           <a href="#">Quần vip</a>
-          <a href="#">Quần áo thể thao</a>
+          <a href="#">Sports & Active wear</a>
           <a href="#">Quần áo vip</a>
+
           <a href="#">Giầy vip</a>
           <a href="#">Phụ kiện vip</a>
         </div>
@@ -40,6 +41,18 @@
         </div>
       </div>
 
+      <!-- <div class="dropdown">
+        <button class="dropbtn">Beauty</button>
+        <div class="dropdown-content">
+          <a href="#">Makeup</a>
+          <a href="#">Skincare,Bath & Body</a>
+          <a href="#">Haircare</a>
+          <a href="#">Fragrances</a>
+          <a href="#">Men's Grooming</a>
+          <a href="#">Beauty Gift</a>
+
+        </div>
+      </div> -->
       <div class="dropdown">
         <button class="dropbtn">Phụ kiện</button>
         <div class="dropdown-content">
@@ -54,7 +67,7 @@
 
     </div>
   </div>
-  <form action="page/Men/search_products.php" method="post"><input class="search" type="search" name="search_key" id="" placeholder="Tìm kiếm sản phẩm"></form>
+  <form action="page/Men/search_products.php" method="post"><input class="search" type="search" name="search_key" id="" placeholder="search for products, bands and more"></form>
 
   <div class="uper side">
     <div class="dropdown headerimg">

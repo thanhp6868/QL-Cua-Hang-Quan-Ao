@@ -30,67 +30,68 @@ include '../../backend/common_function.php';
     src="https://res.cloudinary.com/veseylab/raw/upload/v1636192990/magicmouse/magic_mouse-1.2.1.cdn.min.js"></script>
   <script src="../../js/js_own.js"></script>
 
-  <title>HRX | All Product</title>
+  <title>HRX </title>
 </head>
 
 <body>
   <header>
-    <div class="logo"><a href="index.php"><img src="img/icon.png" alt="" srcset=""></a></div>
+    <div class="logo"></a></div>
     <div>
       <div class="uper">
-      <form action="" method="get">
+        <form action="" method="get">
           <div class="dropdown">
-            <button class="dropbtn">Đực</button>
+            <button class="dropbtn">Nam</button>
             <div class="dropdown-content">
-              <a href="page/Men/topware.php?ctg=Men/Đồ thể thao nam" name="ctg">Đồ thể thao vip</a>
-              <a href="page/Men/topware.php?ctg=Men/Áo khoác nam" name="ctg">Áo khoác vip</a>
-              <a href="page/Men/topware.php?ctg=Men/Quần nam" name="ctg">Quần vip</a>
-              <a href="page/Men/topware.php?ctg=Men/Quần áo nam" name="ctg">Quần áo vip</a>
+              <a href="topware.php?ctg=Men/Đồ thể thao nam" name="ctg">Đồ thể thao vip</a>
+              <a href="topware.php?ctg=Men/Áo khoác nam" name="ctg">Áo khoác vip</a>
+              <a href="topware.php?ctg=Men/Quần nam" name="ctg">Quần vip</a>
+              <a href="topware.php?ctg=Men/Quần áo nam" name="ctg">Quần áo vip</a>
 
-              <a href="page/Men/topware.php?ctg=Men/Giầy nam" name="ctg">Giầy vip</a>
-              <a href="page/Men/topware.php?ctg=Men/Phụ kiện nam" name="ctg">Phụ kiện vip</a>
+              <a href="topware.php?ctg=Men/Giầy nam" name="ctg">Giầy vip</a>
+              <a href="topware.php?ctg=Men/Phụ kiện nam" name="ctg">Phụ kiện vip</a>
             </div>
           </div>
           <div class="dropdown">
-            <button class="dropbtn">Cái</button>
+            <button class="dropbtn">Nữ</button>
             <div class="dropdown-content">
-              <a href="page/Men/topware.php?ctg=Woman/Áo nữ">Áo</a>
-              <a href="page/Men/topware.php?ctg=Woman/Váy">Váy</a>
-              <a href="page/Men/topware.php?ctg=Woman/Trang sức">Trang sức</a>
-              <a href="page/Men/topware.php?ctg=Woman/Đồ thể thao nữ">Đồ thể thao vip</a>
-              <a href="page/Men/topware.php?ctg=Woman/Giầy nữ">Giầy vip</a>
-              <a href="page/Men/topware.php?ctg=Woman/Phụ kiện nữ">Phụ kiện vip</a>
+              <a href="topware.php?ctg=Men/Woman/Áo nữ">Áo</a>
+              <a href="topware.php?ctg=Men/Woman/Váy">Váy</a>
+              <a href="topware.php?ctg=Men/Woman/Trang sức">Trang sức</a>
+              <a href="topware.php?ctg=Men/Woman/Đồ thể thao nữ">Đồ thể thao vip</a>
+              <a href="topware.php?ctg=Men/Woman/Giầy nữ">Giầy vip</a>
+              <a href="topware.php?ctg=Men/Woman/Phụ kiện nữ">Phụ kiện vip</a>
             </div>
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn">Non</button>
+            <button class="dropbtn">Trẻ em</button>
             <div class="dropdown-content">
-              <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nam">Quần áo bé nam</a>
-              <a href="page/Men/topware.php?ctg=Kid/Quần áo bé nữ">Quần áo bé nữ</a>
-              <a href="page/Men/topware.php?ctg=Kid/Giầy bé nam">Giầy bé nam</a>
-              <a href="page/Men/topware.php?ctg=Kid/Giầy bé nữ">Giầy bé nữ</a>
-              <a href="page/Men/topware.php?ctg=Kid/Sơ sinh">Sơ sinh</a>
-              <a href="page/Men/topware.php?ctg=Kid/Phụ kiện cho trẻ">Phụ kiện cho trẻ</a>
+              <a href="topware.php?ctg=Men/Kid/Quần áo bé nam">Quần áo bé nam</a>
+              <a href="topware.php?ctg=Men/Kid/Quần áo bé nữ">Quần áo bé nữ</a>
+              <a href="topware.php?ctg=Men/Kid/Giầy bé nam">Giầy bé nam</a>
+              <a href="topware.php?ctg=Men/Kid/Giầy bé nữ">Giầy bé nữ</a>
+              <a href="topware.php?ctg=Men/Kid/Sơ sinh">Sơ sinh</a>
+              <a href="topware.php?ctg=Men/Kid/Phụ kiện cho trẻ">Phụ kiện cho trẻ</a>
 
             </div>
           </div>
 
-          
+
           <div class="dropdown">
             <button class="dropbtn">Phụ kiện</button>
             <div class="dropdown-content">
-              <a href="page/Men/topware.php?ctg=Accessories/Đồng hồ">Đồng hồ</a>
-              <a href="page/Men/topware.php?ctg=Accessories/Kính">Kính</a>
-              <a href="page/Men/topware.php?ctg=Accessories/Thắt lưng">Thắt lưng</a>
-              <a href="page/Men/topware.php?ctg=Accessories/Khác">Khác</a>
+              <a href="topware.php?ctg=Men/Accessories/Đồng hồ">Đồng hồ</a>
+              <a href="topware.php?ctg=Men/Accessories/Kính">Kính</a>
+              <a href="topware.php?ctg=Men/Accessories/Thắt lưng">Thắt lưng</a>
+              <a href="topware.php?ctg=Men/Accessories/Khác">Khác</a>
             </div>
           </div>
         </form>
+
       </div>
     </div>
     <form action="search_products.php" method="post"><input class="search" type="search" name="search_key" id=""
-        placeholder="search for products, bands and more"></form>
+        placeholder="Tìm kiếm sản phẩm"></form>
 
     <div class="dropdown2">
       <?php
@@ -100,7 +101,7 @@ include '../../backend/common_function.php';
         <p>Profile</p>
       </a>';
       } else {
-        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Đăng nhập</button>';
+        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Login</button>';
       }
       ?>
       <!-- <button type="submit" class="dropbtn2" onclick="loginpage()">Login</button> -->
@@ -136,12 +137,12 @@ include '../../backend/common_function.php';
           </div>
 
 
-          <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Sign in</button>
+          <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Đăng nhập</button>
 
 
           <div class="text-center">
-            <p>Không có tài khoản? <a href="../reg.php">Đăng ký</a></p>
-            <p>hoặc đăng nhập bằng:</p>
+            <p>Chưa có tài khoản? <a href="../reg.php">Đăng kí</a></p>
+            <p>hoặc đăng nhập với:</p>
             <button type="button" class="btn btn-link btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
             </button>
@@ -167,6 +168,7 @@ include '../../backend/common_function.php';
 
     </div>
     <div class="uper  side2">
+
       <div class="dropdown headerimg">
         <a href="../cart.php">
           <img src="img/cart.png" alt="" srcset=""><sup>
@@ -184,24 +186,24 @@ include '../../backend/common_function.php';
     $ctg = "";
     if (isset($_GET['ctg'])) {
       $ctg = $_GET['ctg'];
+      $split = explode("/", $ctg);
+      $ctag = $split[0];
+      $subctag = $split[1];
     }
     ?>
-    
+    <!-- <h3 class="link_w"> <a href="../../index.php">Home /</a> <a href=""><?php echo $ctag; ?> /</a> <?php echo $subctag; ?></h3> -->
     <div class="p_show">
 
       <!-- call product function to display all products -->
       <?php
       if (isset($_GET['ctg'])) {
-        $ctg = $_GET['ctg'];
+        $full_ctg = $_GET['ctg'];
+        $split_ctg = explode("/", $full_ctg);
+        $ctg = $split_ctg[0];
+        $sub_ctg = $split_ctg[1];
 
         $conn = mysqli_connect('localhost', 'root', '', 'eco_admin');
-        if ($ctg == "Woman") {
-          $sql = "select * from product where p_ctag='$ctg' order by rand()";
-        } else if ($ctg == "All") {
-          $sql = "select * from product order by rand()";
-        } else {
-          $sql = "select * from product where p_name like '%$ctg%' or p_keyword like '%$ctg%' or p_ctag like '%$ctg%' or p_sub_ctag like '%$ctg%'";
-        }
+        $sql = "select * from product where p_ctag='$ctg' and p_sub_ctag='$sub_ctg'";
         $res = mysqli_query($conn, $sql);
         if ($res) {
           $num_row = mysqli_num_rows($res);
@@ -218,15 +220,16 @@ include '../../backend/common_function.php';
              <div class="c_img_bg_u ">
                <img class="ctag_img_u" src="img/' . $product_image . '" alt="">
                <h3>' . $product_name . '</h3>
-               <h4>৳.' . $product_price . '</h4>
+                <h4>' . number_format($product_price, 0, ',', '.') . ' VNĐ' . '</h4>
+
            </a>
         
-           <a href="../../add_to_cart.php?add_to_cart=' . $product_id . "/" . $product_price . '"><button class="add_to_cart"> Thêm vào giỏ  </button></a>
+           <a href="../../add_to_cart.php?add_to_cart=' . $product_id . "/" . $product_price . '"><button class="add_to_cart"> Add to Cart </button></a>
          </div>';
             }
           } else {
             echo '<div class="alert alert-warning" role="alert">
-            <h3>Hết hàng</h3>
+            <h3>Related product currently not available</h3>
           </div>';
           }
         } else {
@@ -250,7 +253,7 @@ include '../../backend/common_function.php';
   </script>
 
 
-<footer>
+  <footer>
     <div class="footermain">
       <div class="app">
         <a href="#">
@@ -261,7 +264,7 @@ include '../../backend/common_function.php';
           <img src="img/apple_store.png" alt="" srcset="">
         </a>
       </div>
-      
+
       <div class="social">
         <ul>
           <li><a href="#"><img src="img/fb.png" alt="" srcset=""></a></li>

@@ -125,13 +125,13 @@ include '../../backend/common_function.php';
 
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                <label class="form-check-label" for="form2Example31"> Nhớ mật khẩu </label>
+                <label class="form-check-label" for="form2Example31"> Remember me </label>
               </div>
             </div>
 
             <div class="col">
 
-              <a href="../forgot_password.php">Quên mật khẩu?</a>
+              <a href="../forgot_password.php">Forgot password?</a>
             </div>
           </div>
 
@@ -140,8 +140,8 @@ include '../../backend/common_function.php';
 
 
           <div class="text-center">
-            <p>Không có tài khoản? <a href="../reg.php">Đăng ký</a></p>
-            <p>hoặc đăng nhập bằng:</p>
+            <p>Not a member? <a href="../reg.php">Register</a></p>
+            <p>or sign up with:</p>
             <button type="button" class="btn btn-link btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
             </button>
@@ -173,7 +173,7 @@ include '../../backend/common_function.php';
             <?php $cart = ItemInCart();
             echo $cart; ?>
           </sup>
-          <p>Giỏ hàng</p>
+          <p>Cart</p>
         </a>
       </div>
     </div>

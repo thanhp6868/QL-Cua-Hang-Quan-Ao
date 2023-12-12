@@ -38,7 +38,7 @@ include '../../backend/common_function.php';
     <div class="logo"><a href="index.php"><img src="img/icon.png" alt="" srcset=""></a></div>
     <div>
       <div class="uper">
-      <form action="" method="get">
+        <form action="" method="get">
           <div class="dropdown">
             <button class="dropbtn">Đực</button>
             <div class="dropdown-content">
@@ -76,7 +76,7 @@ include '../../backend/common_function.php';
             </div>
           </div>
 
-          
+
           <div class="dropdown">
             <button class="dropbtn">Phụ kiện</button>
             <div class="dropdown-content">
@@ -105,68 +105,83 @@ include '../../backend/common_function.php';
       ?>
       <!-- <button type="submit" class="dropbtn2" onclick="loginpage()">Login</button> -->
 
-      <div class="dropdown-content2" style="display:none" id="LoginForm">
 
-        <form action="../../backend/user_login.php" method="post">
-          <div class="form-outline mb-4">
-            <input type="username" id="form2Example1" class="form-control" name="username" placeholder="username" />
-            <!-- <label class="form-label" for="form2Example1">Email address</label> -->
-          </div>
+      <div class="dropdown2">
+        <?php
+        if (isset($_SESSION['username'])) {
+          echo '<a href="../../user_area/profile.php" style="top:-20px; color: white; !important">
+        <img src="img/profile.png" alt="" srcset=""  style="width:20px; !important">
+        <p>Profile</p>
+      </a>';
+        } else {
+          echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Đăng nhập</button>';
+        }
+        ?>
+        <!-- <button type="submit" class="dropbtn2" onclick="loginpage()">Login</button> -->
+
+        <div class="dropdown-content2" style="display:none" id="LoginForm">
+
+          <form action="../../backend/user_login.php" method="post">
+            <div class="form-outline mb-4">
+              <input type="username" id="form2Example1" class="form-control" name="username" placeholder="username" />
+              <!-- <label class="form-label" for="form2Example1">Email address</label> -->
+            </div>
 
 
-          <div class="form-outline mb-4">
-            <input type="password" id="form2Example2" class="form-control" name="password" placeholder="password" />
-            <!-- <label class="form-label" for="form2Example2">Password</label> -->
-          </div>
+            <div class="form-outline mb-4">
+              <input type="password" id="form2Example2" class="form-control" name="password" placeholder="password" />
+              <!-- <label class="form-label" for="form2Example2">Password</label> -->
+            </div>
 
 
-          <div class="row mb-4">
-            <div class="col d-flex justify-content-center">
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
 
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                <label class="form-check-label" for="form2Example31"> Nhớ mật khẩu </label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                  <label class="form-check-label" for="form2Example31"> Nhớ mật khẩu </label>
+                </div>
+              </div>
+
+              <div class="col">
+
+                <a href="../forgot_password.php">Quên mật khẩu?</a>
               </div>
             </div>
 
-            <div class="col">
 
-              <a href="../forgot_password.php">Quên mật khẩu?</a>
+            <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Đăng nhập</button>
+
+
+            <div class="text-center">
+              <p>Chưa có tài khoản? <a href="../reg.php">Đăng ký</a></p>
+              <p>hoặc đăng nhập bằng:</p>
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-google"></i>
+              </button>
+
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+              </button>
+
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-github"></i>
+              </button>
             </div>
-          </div>
+          </form>
 
-
-          <button type="submit" class="btn btn-primary btn-block mb-4" name="login">Sign in</button>
-
-
-          <div class="text-center">
-            <p>Không có tài khoản? <a href="../reg.php">Đăng ký</a></p>
-            <p>hoặc đăng nhập bằng:</p>
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-facebook-f"></i>
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-google"></i>
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-twitter"></i>
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-github"></i>
-            </button>
-          </div>
-        </form>
-
+        </div>
       </div>
-    </div>
 
 
 
     </div>
     <div class="uper  side2">
+
       <div class="dropdown headerimg">
         <a href="../cart.php">
           <img src="img/cart.png" alt="" srcset=""><sup>
@@ -186,7 +201,7 @@ include '../../backend/common_function.php';
       $ctg = $_GET['ctg'];
     }
     ?>
-    
+
     <div class="p_show">
 
       <!-- call product function to display all products -->
@@ -250,7 +265,7 @@ include '../../backend/common_function.php';
   </script>
 
 
-<footer>
+  <footer>
     <div class="footermain">
       <div class="app">
         <a href="#">
@@ -261,7 +276,7 @@ include '../../backend/common_function.php';
           <img src="img/apple_store.png" alt="" srcset="">
         </a>
       </div>
-      
+
       <div class="social">
         <ul>
           <li><a href="#"><img src="img/fb.png" alt="" srcset=""></a></li>

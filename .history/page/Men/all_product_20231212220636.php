@@ -95,12 +95,12 @@ include '../../backend/common_function.php';
     <div class="dropdown2">
       <?php
       if (isset($_SESSION['username'])) {
-        echo '<a href="../../user_area/profile.php" style="top:-20px; color: white; !important">
+        echo '<a href="../../backend/user_logout.php" style="top:-20px; color: white; !important">
         <img src="img/profile.png" alt="" srcset=""  style="width:20px; !important">
         <p>Profile</p>
       </a>';
       } else {
-        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Đăng nhập</button>';
+        echo '<button type="submit" class="dropbtn2" onclick="loginpage()">Login</button>';
       }
       ?>
       <!-- <button type="submit" class="dropbtn2" onclick="loginpage()">Login</button> -->
@@ -125,13 +125,13 @@ include '../../backend/common_function.php';
 
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
-                <label class="form-check-label" for="form2Example31"> Nhớ mật khẩu </label>
+                <label class="form-check-label" for="form2Example31"> Remember me </label>
               </div>
             </div>
 
             <div class="col">
 
-              <a href="../forgot_password.php">Quên mật khẩu?</a>
+              <a href="../forgot_password.php">Forgot password?</a>
             </div>
           </div>
 
@@ -140,8 +140,8 @@ include '../../backend/common_function.php';
 
 
           <div class="text-center">
-            <p>Không có tài khoản? <a href="../reg.php">Đăng ký</a></p>
-            <p>hoặc đăng nhập bằng:</p>
+            <p>Not a member? <a href="../reg.php">Register</a></p>
+            <p>or sign up with:</p>
             <button type="button" class="btn btn-link btn-floating mx-1">
               <i class="fab fa-facebook-f"></i>
             </button>
@@ -173,7 +173,7 @@ include '../../backend/common_function.php';
             <?php $cart = ItemInCart();
             echo $cart; ?>
           </sup>
-          <p>Giỏ hàng</p>
+          <p>Cart</p>
         </a>
       </div>
     </div>
@@ -221,12 +221,12 @@ include '../../backend/common_function.php';
                <h4>৳.' . $product_price . '</h4>
            </a>
         
-           <a href="../../add_to_cart.php?add_to_cart=' . $product_id . "/" . $product_price . '"><button class="add_to_cart"> Thêm vào giỏ  </button></a>
+           <a href="../../add_to_cart.php?add_to_cart=' . $product_id . "/" . $product_price . '"><button class="add_to_cart"> Add to Cart </button></a>
          </div>';
             }
           } else {
             echo '<div class="alert alert-warning" role="alert">
-            <h3>Hết hàng</h3>
+            <h3>Related product currently not available</h3>
           </div>';
           }
         } else {
