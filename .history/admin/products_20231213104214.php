@@ -198,10 +198,10 @@ $username = $_SESSION['admin_username'];
                         <form action="add_product.php" class="form-container" method="post" enctype="multipart/form-data">
 
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tên sản phẩm" name="p_name" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Product Name" name="p_name" required>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Mô tả" name="p_details" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Product Details" name="p_details" required>
                             </div>
 
                             <div class="input-group mb-3">

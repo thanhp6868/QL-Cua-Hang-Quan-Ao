@@ -2,22 +2,23 @@
 include('../db/connect.php');
 include('../backend/common_function.php');
 session_start();
+
 $username = $_SESSION['admin_username'];
 
-?>
 
+?>
 <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
-    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
     <link rel="stylesheet" href="profile_style.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HRX | Admin | Đơn hàng</title>
+
+    <title>HRX | Admin | Products</title>
+
     <link rel="shortcut icon" href="../img/fab.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -28,11 +29,9 @@ $username = $_SESSION['admin_username'];
     <div class="side_bar">
         <div class="logo-details">
             <img src="../img/icon.png" alt="" style="width:100px;height:50px !important">
-            <div class="logo_name">Profile</div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
-
             <li>
                 <a href="profile.php">
                     <i class="fa-thin fa"></i>
@@ -42,7 +41,7 @@ $username = $_SESSION['admin_username'];
 
             </li>
             <li>
-                <a href="products.php">
+                <a href="products.php" class="active">
                     <i class="fa-thin fa"></i>
                     <?php
                     $product_quantity = ProductQuantity();
@@ -52,14 +51,12 @@ $username = $_SESSION['admin_username'];
                         echo "<i class='bx bx-cart-alt'></i>";
                     }
                     ?>
-
                     <!-- <i class='bx bxs-cart-download bx-tada' style='color:#fffcfc'></i> -->
-                    <span class="links_name">Sản phẩm</span>
+                    <span class="links_name">View Products</span>
                 </a>
-
             </li>
             <li>
-                <a href="view_orders.php" class="active">
+                <a href="view_orders.php">
                     <i class="fa-thin fa"></i>
                     <?php
                     $orders = PendingOrders();
@@ -79,7 +76,7 @@ $username = $_SESSION['admin_username'];
                 <a href="view_admins.php">
                     <i class="fa-thin fa"></i>
                     <i class='bx bx-user-check' style='color:#ffffff'></i>
-                    <span class="links_name">Xem tài khoản Admin</span>
+                    <span class="links_name">Xem tài khoản admin</span>
                 </a>
 
             </li>
@@ -89,7 +86,7 @@ $username = $_SESSION['admin_username'];
                 <a href="setting.php">
                     <i class="fa-thin fa"></i>
                     <i class='bx bx-cog bx-spin' style='color:#ffffff'></i>
-                    <span class="links_name">Setting</span>
+                    <span class="links_name">Cài đặt</span>
                 </a>
 
             </li>
@@ -105,7 +102,11 @@ $username = $_SESSION['admin_username'];
         </ul>
     </div>
     <section class="home-section">
-        <div class="text">Đơn hàng chờ xác nhận</div>
+        <div class="text">Sản phẩm
+
+            <button type="button" class="btn btn-primary add_product_btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border:none !important">Thêm sản phẩm mới</button>
+
+        </div>
         <div class="text-2">
             <table class="table table-striped">
                 <thead class="thead-light">
@@ -113,102 +114,100 @@ $username = $_SESSION['admin_username'];
                         <th scope="col">#</th>
                         <th scope="col">Image</th>
                         <th scope="col">Tên sản phẩm</th>
-                        <th scope="col">Tên khách hàng</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Mã đơn</th>
+                        <th scope="col">Mô tả</th>
+                        <th scope="col">Từ khoá</th>
+                        <th scope="col">Giá</th>
                         <th scope="col">Số lượng</th>
-                        <th scope="col">Hàng còn</th>
-                        <th scope="col">Trạng thái</th>
-                        <th colspan="2">Hành động</th>
+                        <th colspan="2" class="text-center"> Thao tác</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    $i = 0;
                     $count = 1;
-                    $type = "pending";
-                    $query = "select * from pending_orders where order_status = '$type'";
-
+                    $query = "select * from product order by rand()";
                     $result = mysqli_query($conn, $query);
                     if ($result) {
                         while ($data = mysqli_fetch_array($result)) {
-                            $order_id = $data['order_id'];
-                            $user_id = $data['user_id'];
-                            $product_id = $data['product_id'];
-                            $invoice = $data['invoice_number'];
-                            $quantity = $data['quantity'];
-                            $status = $data['order_status'];
-                            $user_sql = "select * from user_info where user_id = $user_id";
-                            $user_res = mysqli_query($conn, $user_sql);
-                            if ($user_res) {
-                                while ($user_row = mysqli_fetch_array($user_res)) {
-                                    $c_name = $user_row['name'];
-                                    $c_email = $user_row['user_email'];
-
-                                    $product_sql = "select * from product where p_id=$product_id";
-                                    $product_res = mysqli_query($conn, $product_sql);
-                                    if ($product_res) {
-                                        while ($product_row = mysqli_fetch_array($product_res)) {
-                                            $p_img = $product_row['p_img1'];
-                                            $p_quantity = $product_row['p_quantity'];
-                                            $p_name = $product_row['p_name'];
-                                            if ($p_quantity > 0) {
-                                                echo '<tr>
+                            $p_id = $data['p_id'];
+                            $quantity = $data['p_quantity'];
+                            if ($quantity > 0) {
+                                echo '<tr>
                             <th scope="row">' . $count++ . '</th>
-                            <td><img src="../page/Men/img/' . $p_img . '" alt="" style="width:100px; height:100px; object-fit:contain; !important"></img></td>
-                            <td>' . $p_name . '</td>
-                            <td>' . $c_name . '</td>
-                            <td>' . $c_email . '</td>
-                            <td>' . $invoice . '</td>
-                            <td>' . $quantity . '</td>
-                            <td>' . $p_quantity . '</td>
-                            <td>' . $status . '</td>
+                            <td><img src="../page/Men/img/' . $data["p_img1"] . '" alt="" style="width:100px; height:100px; object-fit:contain; !important"></img></td>
+                            <td>' . $data['p_name'] . '</td>
+                            <td>' . $data['p_details'] . '</td>
+                            <td>' . $data['p_keyword'] . '</td>
+                            <td>' . number_format($data['p_price'] , 0, ',', '.') . ' VNĐ' .'</td>
+                            <td>' . $data['p_quantity'] . '</td>
                             <td>
-                            <a href="accept_order.php?id=' . $order_id . "/" . $product_id . "/" . $quantity . "/" . $invoice . ' " style=""><i class="fas fa-check-circle fa-2x text-success"></i></i></a>
-                            
+                            <a href="edit_product.php?id=' . $p_id . '" style=""><i class="bx bx-edit fa-2x" style="color:#00cc88" ></i></button></a>
                             </td>
                             <td>
-                            <a href="delete_order.php?id=' . $order_id . "/" . $invoice . '" style=""><i class="bx bx-x-circle fa-2x" style="color:#f80e0e" ></i></a>
+                            <a href="delete_product.php?id=' . $p_id . '" onclick="return Message()"><i class="bx bx-trash fa-2x" style="color:#f80e0e" ></i></a>
                             </td>
                         </tr>';
-                                            } else {
-                                                echo '<tr>
-                            <th scope="row">' . $count++ . '</th>
-                            <td><img src="../page/Men/img/' . $p_img . '" alt="" style="width:100px; height:100px; object-fit:contain; !important"></img></td>
-                            <td>' . $p_name . '</td>
-                            <td>' . $c_name . '</td>
-                            <td>' . $c_email . '</td>
-                            <td>' . $invoice . '</td>
-                            <td>' . $quantity . '</td>
-                            <td>' . $p_quantity . '</td>
-                            <td>' . $status . '</td>
-                            
-                            <td>
-                            <a href="mail_area/mail.php?id=' . $order_id . "/" . $invoice . '" style="margin-left: 20px !important"><i class="bx bx-x-circle fa-2x" style="color:#f80e0e" ></i></a>
-                            </td>
-                        </tr>';
-                                            }
-                                        }
-                                    } else {
-                                        die(mysqli_error($conn));
-                                    }
-                                }
                             } else {
-                                die(mysqli_error($conn));
+                                echo '<tr class="table-warning">
+                            <th scope="row">' . $count++ . '</th>
+                            <td><img src="../page/Men/img/' . $data["p_img1"] . '" alt="" style="width:100px; height:100px; object-fit:contain; !important"></img></td>
+                            <td>' . $data['p_name'] . '</td>
+                            <td>' . $data['p_details'] . '</td>
+                            <td>' . $data['p_keyword'] . '</td>
+                            <td>'. number_format($data['p_price'] , 0, ',', '.') . ' VNĐ' .'</td>
+                            <td>' . $data['p_quantity'] . '</td>
+                            <td>
+                            <a href="edit_product.php?id=' . $p_id . '" style=""><i class="bx bx-edit fa-2x" style="color:#00cc88" ></i></button></a>
+                            </td>
+                            <td>
+                            <a href="delete_product.php?id=' . $p_id . '"  onclick="return Message()"><i class="bx bx-trash fa-2x" style="color:#f80e0e" ></i></a>
+                            </td>
+                        </tr>';
                             }
                         }
-                    } else {
-                        die(mysqli_error($conn));
                     }
+                    // <i class="bx bxs-edit" style="color:#3a3a3a" ></i> edit icon
+                    // <i class="bx bxs-trash" style="color:#3a3a3a" ></i> delete icon
 
                     ?>
 
+
                 </tbody>
             </table>
+            <div class="d-flex justify-content-center mb-2">
+                <button type="button" class="btn btn-primary">Add Product</button>
+                <a href=""><button type="button" class="btn btn-outline-primary ms-1"><i class='bx bxs-edit' style='color:#3a3a3a'></i> Edit</button></a>
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border:none !important">Thêm sản phẩm mới</button> -->
+            </div>
         </div>
 
 
     </section>
+
+   
+
+    <?php
+    include('back_to_top.php');
+    ?>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+    <script>
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+
+        // myModal.addEventListener('shown.bs.modal', () => {
+        //     myInput.focus()
+        // })
+    </script>
+
+    <script>
+        function Message() {
+            return Confirm("Xác nhận xoá?");
+        }
+    </script>
+
 </body>
 
 </html>

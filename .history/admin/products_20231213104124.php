@@ -198,10 +198,10 @@ $username = $_SESSION['admin_username'];
                         <form action="add_product.php" class="form-container" method="post" enctype="multipart/form-data">
 
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tên sản phẩm" name="p_name" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Product Name" name="p_name" required>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Mô tả" name="p_details" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Product Details" name="p_details" required>
                             </div>
 
                             <div class="input-group mb-3">
@@ -254,13 +254,13 @@ $username = $_SESSION['admin_username'];
 
 
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Từ khoá tìm kiếm" name="p_keyword" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Keywords" name="p_keyword" required>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Giá" name="p_price" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Price" name="p_price" required>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Số lượng" name="p_quantity" required>
+                                <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Quantity" name="p_quantity" required>
                             </div>
                             <div class="input-group mb-3">
                                 <input type="file" class="form-control" id="inputGroupFile02" name="p_img1" required>
@@ -276,7 +276,7 @@ $username = $_SESSION['admin_username'];
                             </div>
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button class="btn btn-warning" type="submit" name="add_product">Thêm sản phẩm</button>
+                                <button class="btn btn-warning" type="submit" name="add_product">Add Product</button>
                             </div>
 
                         </form>

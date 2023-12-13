@@ -198,10 +198,10 @@ $username = $_SESSION['admin_username'];
                         <form action="add_product.php" class="form-container" method="post" enctype="multipart/form-data">
 
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Tên sản phẩm" name="p_name" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Product Name" name="p_name" required>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Mô tả" name="p_details" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Product Details" name="p_details" required>
                             </div>
 
                             <div class="input-group mb-3">
@@ -218,49 +218,55 @@ $username = $_SESSION['admin_username'];
                                 <label class="input-group-text" for="inputGroupSelect01">Danh mục con</label>
                                 <select class="form-select" id="inputGroupSelect01" name="p_sub_ctag">
                                     <option selected>Choose...</option>
-                                    <option value="Áo vip" style="background-color: #333454;color: aliceblue;">Áo vip</option>
-                                    <option value="Áo khoác vip" style="background-color: #333454;color: aliceblue">Áo khoác vip</option>
-                                    <option value="Đồ thể thao vip" style="background-color: #333454;color: aliceblue">Đồ thể thao vip</option>
-                                    <option value="Quần vip" style="background-color: #333454;color: aliceblue">Quần vip</option>
-                                    <option value="Giầy vip" style="background-color: #333454;color: aliceblue">Giầy vip</option>
+                                    <option value="Topwear" style="background-color: #333454;color: aliceblue;">Áo vip</option>
+                                    <option value="Bottomwear" style="background-color: #333454;color: aliceblue">Áo khoác vip</option>
+                                    <option value="Sports and Active wear">Đồ thể thao vip</option>
+                                    <option value="Festive wear" style="background-color: #333454;color: aliceblue">Quần vip</option>
+                                    <option value="Footwear" style="background-color: #333454;color: aliceblue">Giầy vip</option>
                                     <option value="Desi and Fusion wear" style="background-color:#59343e ;color: aliceblue;">Quần áo vip</option>
-                                    <option value="Quần áo vip" style="background-color:#59343e ;color: aliceblue;">Áo khoác</option>
-                                    <option value="Trang sức" style="background-color:#59343e ;color: aliceblue;">Trang sức</option>
-                                    <option value="Quần áo bé nam" style="background-color:#34594c ;color: aliceblue;">Quần áo bé nam</option>
-                                    <option value="Quần áo bé nữ" style="background-color:#34594c ;color: aliceblue;">Quần áo bé nữ</option>
-                                    <option value="Giày bé nam" style="background-color:#34594c ;color: aliceblue;">Giày bé nam</option>
-                                    <option value="Giày bé nữ" style="background-color:#34594c ;color: aliceblue;">Giày bé nữ</option>
-                                    <option value="Sơ sinh" style="background-color:#34594c ;color: aliceblue;">Sơ sinh</option>
-                                    <option value="Phụ kiện cho trẻ" style="background-color:#34594c ;color: aliceblue;">Phụ kiện cho trẻ</option>
-                                    <option value="Đồng hồ" style="background-color:#522f4b ;color: aliceblue;">Đồng hồ</option>
-                                    <option value="Kính" style="background-color:#522f4b ;color: aliceblue;">Kính</option>
-                                    <option value="Thắt lưng" style="background-color:#522f4b ;color: aliceblue;">Thắt lưng</option>
-                                    <option value="Khác" style="background-color:#522f4b ;color: aliceblue;">Khác</option>
-                                    
+                                    <option value="Western wear" style="background-color:#59343e ;color: aliceblue;">Áo khoác</option>
+                                    <option value="Jewellery" style="background-color:#59343e ;color: aliceblue;">Trang sức</option>
+                                    <option value="Boys Clothing" style="background-color:#34594c ;color: aliceblue;">Quần áo bé nam</option>
+                                    <option value="Girls Clothing" style="background-color:#34594c ;color: aliceblue;">Quần áo bé nữ</option>
+                                    <option value="Boys Footwear" style="background-color:#34594c ;color: aliceblue;">Giày bé nam</option>
+                                    <option value="Girls Foorwear" style="background-color:#34594c ;color: aliceblue;">Girls Foorwear</option>
+                                    <option value="Infants" style="background-color:#34594c ;color: aliceblue;">Infants</option>
+                                    <option value="Kid Accessories" style="background-color:#34594c ;color: aliceblue;">Kid Accessories</option>
+                                    <option value="Makeup" style="background-color:#522f4b ;color: aliceblue;">Makeup</option>
+                                    <option value="Skincare,Bath and Body" style="background-color:#522f4b ;color: aliceblue;">Skincare,Bath and Body</option>
+                                    <option value="Haircare" style="background-color:#522f4b ;color: aliceblue;">Haircare</option>
+                                    <option value="Fragrances" style="background-color:#522f4b ;color: aliceblue;">Fragrances</option>
+                                    <option value="Mens Grooming" style="background-color:#522f4b ;color: aliceblue;">Men Grooming</option>
+                                    <option value="Beauty Gift" style="background-color:#522f4b ;color: aliceblue;">Beauty Gift</option>
+                                    <option value="Watch" style="background-color:#263024 ;color: aliceblue;">Watch</option>
+                                    <option value="Sunglasses" style="background-color:#263024 ;color: aliceblue;">Sunglasses</option>
+                                    <option value="Belts" style="background-color:#263024 ;color: aliceblue;">Belts</option>
+                                    <option value="Bath Accessories" style="background-color:#263024 ;color: aliceblue;">Bath Accessories</option>
                                 </select>
                             </div>
                             <div class="input-group mb-3">
-                                <label class="input-group-text" for="inputGroupSelect01">Màu</label>
+                                <label class="input-group-text" for="inputGroupSelect01">Color</label>
                                 <select class="form-select" id="inputGroupSelect01" name="p_color">
-                                    <option selected>Chọn 1 màu...</option>
-                                    <option value="Blue">Xanh</option>
-                                    <option value="Red">Đỏ</option>
-                                    <option value="Black">Đen sì</option>
-                                    <option value="Yellow">Vàng</option>
-                                    <option value="White">Trắng</option>
-                                    <option value="Green">Xanh lá</option>
+                                    <option selected>Choose...</option>
+                                    <option value="Blue">Blue</option>
+                                    <option value="Red">Red</option>
+                                    <option value="Black">Black</option>
+                                    <option value="Maroon">Maroon</option>
+                                    <option value="Yellow">Yellow</option>
+                                    <option value="White">White</option>
+                                    <option value="Green">Green</option>
                                 </select>
                             </div>
 
 
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Từ khoá tìm kiếm" name="p_keyword" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Keywords" name="p_keyword" required>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Giá" name="p_price" required>
+                                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Price" name="p_price" required>
                             </div>
                             <div class="input-group mb-3">
-                                <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Số lượng" name="p_quantity" required>
+                                <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Quantity" name="p_quantity" required>
                             </div>
                             <div class="input-group mb-3">
                                 <input type="file" class="form-control" id="inputGroupFile02" name="p_img1" required>
@@ -276,7 +282,7 @@ $username = $_SESSION['admin_username'];
                             </div>
 
                             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                                <button class="btn btn-warning" type="submit" name="add_product">Thêm sản phẩm</button>
+                                <button class="btn btn-warning" type="submit" name="add_product">Add Product</button>
                             </div>
 
                         </form>

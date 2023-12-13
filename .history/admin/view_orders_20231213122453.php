@@ -105,7 +105,7 @@ $username = $_SESSION['admin_username'];
         </ul>
     </div>
     <section class="home-section">
-        <div class="text">Đơn hàng chờ xác nhận</div>
+        <div class="text">Pending Orders</div>
         <div class="text-2">
             <table class="table table-striped">
                 <thead class="thead-light">
